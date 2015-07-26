@@ -1,0 +1,27 @@
+<li>
+	{{#if images.thumb}}
+	<img width="50" src="{{images.thumb}}" alt="{{name}}" />
+	{{else}}
+	<img src="/demobilleder/hlowq.jpg" />
+	{{/if}}
+</li>
+<li>
+	<h1>{{name}}</h1>
+</li>
+<li>
+	<a href="{{slug}}" class="selected artistOverview ">
+		<h2>Oversigt</h2>
+	</a>
+</li>
+{{#if videos}}
+<li>
+	<a href="{{slug}}/videoer" class="artistVideos">
+		<h2>Videoer</h2>
+	</a>
+</li>
+{{/if}}
+<li>
+	<a href="{{slug}}/udgivelser" class="artistReleases">
+		<h2>Udgivelser</h2>
+	</a>
+</li>

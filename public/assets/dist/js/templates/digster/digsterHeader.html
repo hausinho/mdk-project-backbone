@@ -1,0 +1,104 @@
+{{#each this}}
+
+{{#if @first}}
+<img id="dlogo" src="http://static.musik.dk/upload/files/various_temp/digster.svgz">
+<div id="artdigcover">		
+	<figure class="digsterTop">
+		<img src="{{image.large.[0]}}" width="200" height="200"  alt="">
+		<span>
+			<iframe id="spotifyPlayer" class="lazyload" data-src="" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+			<a href="" class="otherServices" target="_blank">Afspil på andre tjenester</a>	
+				<div style="display:none" class="streamServices">
+					<section class="ppw-links ip">
+						<div id="ppwlinkh">
+							<h2>Vælg tjeneste:</h2>
+						</div>
+						<div class="ipof">
+							<ol class="olls">
+								{{#if services.spotify}}
+								<li>
+									<a href="{{services.spotify}}" class="spotifyPopupService" target="_blank"><button class="btnspotify iebgfix playService" >&nbsp;</button></a>
+								</li>
+								{{/if}}
+								{{#if services.tdcplay}}
+								<li>
+									<a href="{{services.tdcplay}}" target="_blank"><button class="btntdcplay iebgfix playService">&nbsp;</button></a>
+								</li>
+								{{/if}}
+								{{#if services.telmore}}
+								<li>
+									<a href="{{services.telmore}}" target="_blank"><button class="btntelmore iebgfix playService">&nbsp;</button></a>
+								</li>
+								{{/if}}
+								{{#if services.youmusic}}
+								<li>
+									<a href="{{services.youmusic}}" target="_blank"><button class="btnyoumusic iebgfix playService">&nbsp;</button></a>
+								</li>
+								{{/if}}
+								{{#if services.wimp}}
+								<li>
+									<a href="{{services.wimp}}" target="_blank"><button class="btnwimp iebgfix playService">&nbsp;</button></a>
+								</li>
+								{{/if}}
+								{{#if services.deezer}}
+								<li>
+									<a href="{{services.deezer}}" target="_blank"><button class="btndeezer iebgfix playService" >&nbsp;</button></a>
+								</li>
+								{{/if}}	
+							</ol>
+						</div>
+					</section>				
+				</div>			
+		</span>
+	</figure>
+</div>
+<figure class="blurdh">
+	<img class="lazyload" data-src="" src="" alt="">
+	<div class="discoverlay"></div>
+</figure>
+{{/if}}
+
+
+
+<div id="streamService" class="white-popup mfp-hide">
+	<section class="ppw-links ip">
+		<div id="ppwlinkh">
+			<h2>Vælg tjeneste:</h2>
+		</div>
+		<div class="ipof">
+			<ol class="olls">
+				{{#if services.spotify}}
+				<li>
+					<a href="{{services.spotify}}" class="spotifyPopupService" target="_blank"><button class="btnspotify iebgfix playService" >&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.tdcplay}}
+				<li>
+					<a href="{{services.tdcplay}}" target="_blank"><button class="btntdcplay iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.telmore}}
+				<li>
+					<a href="{{services.telmore}}" target="_blank"><button class="btntelmore iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.youmusic}}
+				<li>
+					<a href="{{services.youmusic}}" target="_blank"><button class="btnyoumusic iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.wimp}}
+				<li>
+					<a href="{{services.wimp}}" target="_blank"><button class="btnwimp iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.deezer}}
+				<li>
+					<a href="{{services.deezer}}" target="_blank"><button class="btndeezer iebgfix playService" >&nbsp;</button></a>
+				</li>
+				{{/if}}	
+			</ol>
+		</div>
+	</section>
+</div>
+{{/each}}

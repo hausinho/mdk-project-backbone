@@ -1,0 +1,498 @@
+
+<div class="pr">
+	{{#each this}}
+	{{#random featured}}
+	<figure class="ti pr">
+		<div id="burnsbox">
+			<img src="{{images.cover}}" alt="{{name}}" />		
+		</div>
+		<div class="mhlogo"></div>
+		<figcaption class="metacomp">
+			<h2>MusikDK anbefaler</h2>
+			<h1>{{name}}</h1>
+		</figcaption>
+		<a href="/{{slug}}">
+			<div class="goto"></div>
+		</a>	
+	</figure>
+	{{/random}}
+	{{/each}}
+	
+	<div>
+		<header class="h rlt">
+			<span class="fe i-open-book hicon" aria-hidden="true"></span>
+			<span>Nyheder</span>
+		</header>
+
+		<div class="ipno pc33 news c pr">
+		{{#each this}}
+			{{#each news}}
+				<article>
+					<a href="{{link}}" target="_blank">
+						<img class="lazyload" data-src="{{thumb}}"  width="100" height="100" alt="{{title}}">
+						<h4>{{source_name}}</h4>
+						<h2>{{title}}</h2>
+						<time class="newstime" datetime="{{pubDate}}">{{dateFromNow pubDate}}</time>
+						<span class="fe i-export cicon pa" aria-hidden="true"></span>
+					</a>
+				</article>
+			{{/each}}
+			{{/each}}
+			<button class="btnwhite btnmore btnrss" type="button">Vis flere nyheder</button>
+		</div>	
+	</div>
+	{{#each this}}
+	{{#if contests}}
+	<div>
+		<header class="h">
+			<span class="bluedot" aria-hidden="true">&nbsp;&nbsp;&nbsp;</span>
+			Konkurrencer
+		</header>
+		<div class="ip2 c comp pr">
+			<ul>
+			{{#random contests}}
+				<li style="height: 200px">
+					<a href="/konkurrencer/{{contest_id}}"> 
+						<!-- ARTIST IMAGE-->
+						{{#if artist.thumb}}
+						<img class="lazyload" data-src="{{artist.thumb}}" width="200" height="200" alt="{{artist.name}}" />
+						{{else}}
+						<img class="lazyload" data-src="/assets/images/default_thumb.gif" width="200" height="200" />
+						{{/if}}
+						<!-- TITLE-->
+						<h2>{{{title}}}</h2>
+						<!-- DECRIPTION -->
+						<p>{{{description}}}</p>
+					</a>
+				</li>
+			{{/random}}			
+			</ul>
+		</div>
+		<div class="ip3 compBtnDiv" style="display:none;">
+			<a href="/konkurrencer">
+				<button class="btnblue" type="button">
+					<span style="margin-left:15px">Gå til konkurrencer</span><span class="buttonicon" data-icon="V" aria-hidden="true"></span>
+				</button>
+			</a>
+		</div>	
+	</div>
+	{{/if}}
+	{{/each}}
+	<div>
+		<header class="h">
+			<span class="fe i-video hicon redtext" aria-hidden="true"></span>
+			Nye videoer
+		</header>
+
+		<div class="ip2 c pc4to3 singleVideos pr">
+			{{#each this}}   
+				{{#each videos}}
+			<article class="video">
+				<a class="vidPopup" href="https://www.youtube.com/watch?v={{youtube_id}}" data-ytid="{{youtube_id}}">
+					<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{youtube_id}}/mqdefault.jpg" alt="{{title}}">
+					<div class="vidol">
+						<span>AFSPIL</span>
+					</div>
+					<div class="ellipsis">
+						<h2 class="vn">{{title}}</h2><br>
+						<h2 class="van">{{name}}</h2>
+					</div>
+					<span class="fe i-play cicon" aria-hidden="true"></span>
+				</a>
+			</article>
+				{{/each}}			
+		{{/each}}
+		</div>
+		<div class="ip3 pr">
+			<button class="btnwhite btnmore btnvid" type="button">Vis flere videoer</button>
+<!-- 		<a href="/videoer">
+				<button class="btnblue btngotovid" type="button" style="width:32.6%;float:right;margin-right:1px">
+					<span style="margin-left:15px">Gå til videoer</span>
+					<span class="buttonicon" data-icon="V" aria-hidden="true"></span>
+				</button>			
+			</a>  -->
+
+		</div>
+	</div>
+
+	<div class="pr">
+		<header class="h ltr fl">
+			<span class="fe i-star hicon" aria-hidden="true"></span>
+			Artister | Genre
+		</header>
+		<div class="tabs lt clear">
+			<ul class="genresList">
+				<li><a class="genPor selected">Pop/Rock</a></li>
+				<li><a class="genAlt">Alternative</a></li>
+				<li><a class="genDan">Dance/Electro</a></li>
+				<li><a class="genHip">HipHop</a></li>
+				<li><a class="genRnb">Rnb/Soul</a></li>
+				<li><a class="genJazz">Jazz & Blues</a></li>
+				<li><a class="genWrd">World</a></li>
+				<li><a class="genCls">Klassisk</a></li>
+			</ul>
+		</div>
+		<div class="ipno c pc4to3 genres pr">
+		{{#each this}}
+		
+			<div class="genrePoprock">
+				{{#shuffle genres.[poprock]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btngenpor" type="button">Vis flere artister</button>
+			</div>
+
+			<div class="genreAlternative" style="display:none;">
+				{{#shuffle genres.[alternative]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btngenalt" type="button">Vis flere artister</button>				
+			</div>
+
+			<div class="genreElectronic" style="display:none;">
+				{{#shuffle genres.[electronic]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btngendan" type="button">Vis flere artister</button>
+			</div>
+
+			<div class="genreHiphop" style="display:none;">
+				{{#shuffle genres.[hiphop]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}	
+				<button class="btnwhite btnmore btngenhip" type="button">Vis flere artister</button>				
+			</div>
+
+			<div class="genreRnbSoul" style="display:none;">
+				{{#shuffle genres.[rnbsoul]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}	
+			<button class="btnwhite btnmore btngenrnb" type="button">Vis flere artister</button>				
+			</div>
+
+			<div class="genreJazzBlues" style="display:none;">
+				{{#shuffle genres.[jazzblues]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}	
+				<button class="btnwhite btnmore btngenjazz" type="button">Vis flere artister</button>
+			</div>
+
+			<div class="genreWorld" style="display:none;">
+				{{#shuffle genres.[world]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btngenwrd" type="button">Vis flere artister</button>				
+			</div>
+
+			<div class="genreClassic" style="display:none;">
+				{{#shuffle genres.[classical]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btngencls" type="button">Vis flere artister</button>				
+			</div>			
+		{{/each}}
+		</div>
+	</div>
+
+	<div class="pr">
+		<header class="h ltr fl">
+			<span class="fe i-star hicon" aria-hidden="true"></span>
+			Artister | År
+		</header>
+		<div class="tabs lt">
+			<ul class="decadesList">
+				<li><a class="dec10 selected">10'erne</a></li>
+				<li><a class="dec00">00'erne</a></li>
+				<li><a class="dec90">90'erne</a></li>
+				<li><a class="dec80">80'erne</a></li>
+				<li><a class="dec70">70'erne</a></li>
+				<li><a class="dec60">60'erne</a></li>
+				<li><a class="dec50">50'erne</a></li>
+			</ul>
+		</div>
+		<div class="ipno c pc4to3 decades">
+		{{#each this}}			
+			<div class="decade50" style="display:none">		
+				{{#shuffle decades.[1950]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec50" type="button">Vis flere artister</button>
+			</div>			
+	
+			<div class="decade60" style="display:none">		
+				{{#shuffle decades.[1960]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec60" type="button">Vis flere artister</button>
+			</div>
+		
+			<div class="decade70" style="display:none">		
+				{{#shuffle decades.[1970]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec70" type="button">Vis flere artister</button>
+			</div>
+		
+			<div class="decade80" style="display:none">		
+				{{#shuffle decades.[1980]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec80" type="button">Vis flere artister</button>
+			</div>
+	
+			<div class="decade90" style="display:none">		
+				{{#shuffle decades.[1990]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}	
+				<button class="btnwhite btnmore btndec90" type="button">Vis flere artister</button>
+			</div>
+		
+			<div class="decade00" style="display:none">		
+				{{#shuffle decades.[2000]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec00" type="button">Vis flere artister</button>
+			</div>
+
+			<div class="decade10">		
+				{{#shuffle decades.[2010]}}
+				{{#each this}}
+				<article>
+					<a href="/{{slug}}">
+						<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+						<div class="artistol">
+							<span>Se artist</span>
+						</div>
+						<div class="ellipsis">
+							<h2 class="an">{{name}}</h2>
+						</div>
+					</a>
+				</article>
+				{{/each}}
+				{{/shuffle}}
+				<button class="btnwhite btnmore btndec10" type="button">Vis flere artister</button>
+			</div>				
+		{{/each}}
+		</div>
+	</div>
+
+	<div class="pr">
+		<header class="h rlt">
+			<span class="fe i-ticket hicon" aria-hidden="true"></span>
+			Kommende koncerter
+		</header>
+
+		<div class="ip clive pc50list pr">	
+			<ul class="ll">
+				{{#each this}}
+				{{#each concerts}}
+				<li class="noc">
+					{{#equal delivery_status "Cancelled"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">AFLYST</div>
+					</div>
+					{{/equal}}
+					{{#equal delivery_status "Sold out"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">UDSOLGT</div>
+					</div>
+					{{/equal}}					
+					<div class="cimage">
+						<img class="lazyload" data-src="{{artist.thumb}}"  width="120" height="120" alt="{{name}}">
+						<time datetime="{{date}}">{{dateFormatMonth date}}<span>{{dateFormatDay date}}</span></time>
+					</div> 	
+					<div class="clinfo-front">	
+						<h2>{{artist_name}}</h2>
+						<h3 class="ellipsis">{{venue_name}} ({{venue_city}})</h3>
+						<h5>{{trimTime time}}</h5>
+					</div>
+					{{#equal delivery_status "Normal"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticgreen"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Few"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticyellow"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Waiting list"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticredwait"></div></a>
+					{{/equal}}	
+				</li>
+				{{/each}}
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="ip3">
+			<button class="btnwhite btnmore btnlive" type="button">Vis flere koncerter</button>
+		</div>		
+	</div>
+
+</div>
+

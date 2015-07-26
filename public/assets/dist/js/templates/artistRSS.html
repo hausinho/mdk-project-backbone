@@ -1,0 +1,12 @@
+{{#each this}}
+<article>
+	<a href="{{link}}" target="_blank">
+		<img class="lazyload" data-src="{{source.logo}}" width="100" alt="{{title}}">
+		<h4>{{source.name}}</h4>
+		<h2>{{title}}</h2>
+		<time class="newstime">{{dateFromNow pubDate}}</time>
+		<span class="font-entypo icon-export cicon pa" aria-hidden="true"></span>
+	</a>
+</article>
+{{/each}}
+<button class="btnwhite btnmore btnrss">Vis flere nyheder</button>

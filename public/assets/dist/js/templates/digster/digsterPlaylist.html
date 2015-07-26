@@ -1,0 +1,161 @@
+					
+<div class="pr">
+	<a href="/digster">
+		<img id="dlogo" src="https://static.musik.dk/upload/files/various_temp/digster.svgz">
+	</a>
+	<div id="artdigcover">		
+		<figure class="digstertop">
+			<img src="" width="200" height="200"  alt="">
+			<span>
+				<iframe id="spotifyPlaylist" class="lazyload" data-src="" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+					<a href="" class="otherServices" target="_blank">Afspil på andre tjenester</a>
+					<div style="display:none" class="streamServices">
+						<section class="ppw-links ip">
+							<div id="ppwlinkh">
+								<h2>Vælg tjeneste:</h2>
+							</div>
+							<div class="ipof">
+								<ol class="olls">
+									{{#if services.spotify}}
+									<li>
+										<a href="{{services.spotify}}" class="spotifyPopupService" target="_blank"><button class="btnspotify iebgfix playService" >&nbsp;</button></a>
+									</li>
+									{{/if}}
+									{{#if services.tdcplay}}
+									<li>
+										<a href="{{services.tdcplay}}" target="_blank"><button class="btntdcplay iebgfix playService">&nbsp;</button></a>
+									</li>
+									{{/if}}
+									{{#if services.telmore}}
+									<li>
+										<a href="{{services.telmore}}" target="_blank"><button class="btntelmore iebgfix playService">&nbsp;</button></a>
+									</li>
+									{{/if}}
+									{{#if services.youmusic}}
+									<li>
+										<a href="{{services.youmusic}}" target="_blank"><button class="btnyoumusic iebgfix playService">&nbsp;</button></a>
+									</li>
+									{{/if}}
+									{{#if services.wimp}}
+									<li>
+										<a href="{{services.wimp}}" target="_blank"><button class="btnwimp iebgfix playService">&nbsp;</button></a>
+									</li>
+									{{/if}}
+									{{#if services.deezer}}
+									<li>
+										<a href="{{services.deezer}}" target="_blank"><button class="btndeezer iebgfix playService" >&nbsp;</button></a>
+									</li>
+									{{/if}}	
+								</ol>
+							</div>
+						</section>				
+					</div>
+			</span>
+		</figure>
+	</div>
+	<figure class="blurdh">
+		<img class="lazyload" data-src="" src="" alt="">
+		<div class="discoverlay"></div>
+	</figure>
+</div>
+
+<div class="pr">		
+	<section class="mcl mr350">
+		<div class="ip">		
+			<p id="plinfo">{{this.title}} holder dig opdateret med alle de nyeste hits hver uge. Følg også <a href="http://www.digster.dk/playlists/{{slug}}" target="_blank">{{this.title}}</a>, hvis du vil have de allerstørste og bedste hits samlet på én playliste, og husk at følge playlisterne på din foretrukne musiktjeneste så du løbende bliver opdateret med ny musik!</p>
+			<div id="diginfowrap">
+					
+				<h1>Åbn <span>{{this.title}}</span> i din yndlingstjeneste:</h1>
+				
+					{{#if services.spotify}}
+					<button class="btnspotify iebgfix playService" data-href="{{services.spotify}}">&nbsp;</button>
+					{{/if}}
+					{{#if services.tdcplay}}
+					<button class="btntdcplay iebgfix playService" data-href="{{services.tdcplay}}">&nbsp;</button>
+					{{/if}}
+					{{#if services.telmore}}
+					<button class="btntelmore iebgfix playService" data-href="{{services.telmore}}">&nbsp;</button>
+					{{/if}}
+					{{#if services.youmusic}}
+					<button class="btnyoumusic iebgfix playService" data-href="{{services.youmusic}}">&nbsp;</button>
+					{{/if}}
+					{{#if services.wimp}}
+					<button class="btnwimp iebgfix playService" data-href="{{services.wimp}}">&nbsp;</button>
+					{{/if}}
+					{{#if services.deezer}}
+					<button class="btndeezer iebgfix playService" data-href="{{services.deezer}}">&nbsp;</button>
+					{{/if}}
+				
+			</div>	
+			<ol class="digsterlist">
+			{{#each tracks}}
+				<li>{{title}}<span>{{artists}}</span></li>
+			{{/each}}
+			</ol>
+		</div>
+	</section>
+	<section class="cr w350">
+		<header class="h rrt">
+			<span class="fe i-circled-info hicon"  aria-hidden="true"></span>
+			<h2>Hvad er Digster?</h2>
+		</header>
+		<div class="ip" id="omd">
+	 	
+			<p>Digster er Danmarks største samling af gratis playlister til Spotify, WiMP, YouMusic, TDC Play og Deezer.</p><br>
+
+			<p>Vi sammensætter playlister til enhver smag og ethvert humør, og tilføjer ugentligt nye tracks. Husk at gå ind og følge din favorit-playliste på din foretrukne musiktjeneste, og du vil blive løbende blive opdateret!</p><br>
+	 	
+			<p>Du kan også besøge Digster på Facebook. </p>
+		
+		</div>	               
+                 
+		<img src="https://static.musik.dk/upload/files/nova.jpg" alt="Lyt til Digster på Nova og The Voice">  
+		<header style="margin-top: -4px" class="h rrt">
+			<span class="fe i-star hicon" aria-hidden="true"></span>
+			<h2>Flere populære playlister</h2>
+		</header>   
+		<div class="ip2 cdigster digster"></div>		
+    </section>	
+</div>
+
+<div id="chooseService" class="white-popup mfp-hide">
+	<section class="ppw-links ip">
+		<div id="ppwlinkh">
+			<h2>Vælg tjeneste:</h2>
+		</div>
+		<div class="ipof">
+			<ol class="olls">
+				{{#if services.spotify}}
+				<li>
+					<a href="{{services.spotify}}" class="spotifyPopupService" target="_blank"><button class="btnspotify iebgfix playService" >&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.tdcplay}}
+				<li>
+					<a href="{{services.tdcplay}}" target="_blank"><button class="btntdcplay iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.telmore}}
+				<li>
+					<a href="{{services.telmore}}" target="_blank"><button class="btntelmore iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.youmusic}}
+				<li>
+					<a href="{{services.youmusic}}" target="_blank"><button class="btnyoumusic iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.wimp}}
+				<li>
+					<a href="{{services.wimp}}" target="_blank"><button class="btnwimp iebgfix playService">&nbsp;</button></a>
+				</li>
+				{{/if}}
+				{{#if services.deezer}}
+				<li>
+					<a href="{{services.deezer}}" target="_blank"><button class="btndeezer iebgfix playService" >&nbsp;</button></a>
+				</li>
+				{{/if}}	
+			</ol>
+		</div>
+	</section>
+</div>

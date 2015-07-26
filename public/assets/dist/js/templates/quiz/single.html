@@ -1,0 +1,167 @@
+<header id="quizheader">	
+	<h1>{{title}}</h1>
+	<p data-ui-start="hide">{{description}}</p>
+	<div data-finished-battle="hide" data-ui-start="fadeIn" style="display:none;">
+		<article>
+			<h5>Dine point</h5>
+			<h6 class="quiz-score">*</h6>
+		</article>
+		{{#unless isContest}}
+		<article>
+			<h5>Samlet placering</h5>
+			<h6 class="quiz-rank">*</h6>
+		</article>
+		{{/unless}}
+		<article>
+			<h5>Spørgsmål</h5>
+			<h6 class="quiz-position">*</h6>
+		</article>
+	</div>
+</header>
+
+{{#ifAndTrue battle user}}
+<section id="h2h" class="pr" data-finished-battle="hide">
+	<span data-user-h2h-id="{{battle.user.user_id}}">
+		<div class="hinfo">
+			<h2>{{battle.user.name}}</h2>
+			<h3 id="quizwinner">{{battle.score}} POINT</h3>
+		</div>
+		<img src="{{battle.user.avatar_large}}" width="60" height="60" alt="{{battle.user.name}}">
+	</span>
+	<h4>VS</h4>
+	<span data-user-h2h-id="{{user.user_id}}">
+		<img src="{{user.avatar_large}}" width="60" height="60" alt="{{user.name}}">
+		<div class="hinfo2">
+			<h2>{{user.name}}</h2>
+			<h3 id="quizlooser"><span class="quiz-score">0</span> POINT</h3>
+		</div>
+	</span>
+</section>
+{{/ifAndTrue}}
+
+<div data-state="start">
+	<figure class="tc pr">
+		<div id="burnsbox">
+			<img src="{{artist.images.cover}}" alt="{{artist.name}}">
+		</div>
+		<div id="quiztitles">
+			<!-- CLICK TO START QUIZ -->
+			{{#if battle}}
+			<div id="startquiz">KLIK HER FOR AT STARTE IMOD {{battle.user.name}}</div>
+			{{else}}
+			<div id="startquiz">KLIK HER FOR AT STARTE</div>
+			{{/if}}
+		</div>
+		<div id="campaignpoll"></div>
+	</figure>
+	<div class="ipno black" id="quizbtnfill">	
+		<div class="tc">
+			<h2 class="whitetext">Slå dine venner</h2>
+			<p class="whitetext">Del din samlede score på Facebook efter quizzen og se om dine venner kan slå dig!</p>
+		</div>
+	</div>
+</div>
+
+<div data-state="active" style="display:none;">
+	<figure class="tc pr">
+		<div id="burnsbox">
+			<img src="{{artist.images.cover}}" alt="{{artist.name}}">
+		</div>
+		<div id="quiztitles">
+			<ul>
+				<li class="chart" data-percent="100">
+				<span id="quiz-countdown-question">5</span>
+				<span id="quiz-score-counter" ><span>1000</span>POINT</span><canvas height="240" width="240" style="height: 120px; width: 120px;"></canvas></li>
+			</ul>
+			<h2 id="question">{{question.question}}</h2>
+		</div>
+		<div id="campaignpoll"></div>
+	</figure>
+	<div class="ipno black" id="d-a-h">
+		<div data-answers>
+			{{#each question.answers}}
+			<button class="btngreen" style="min-height:44px;" data-answer-id="{{quiz_answer_id}}"><span>{{title}}</span></button>
+			{{/each}}
+		</div>
+	</div>
+</div>
+<div data-state="finished" style="display:none;"> 
+	<figure class="tc pr">
+		<div id="burnsbox">
+			<img src="{{artist.images.cover}}" alt="{{artist.name}}">
+		</div>
+		<div id="quiztitles">
+			<div class="tc">
+				{{#if isContest}} 
+					<h6>Tak, du fik<span>&nbsp;<span class="quiz-score">0</span> point</span>, du deltager nu i konkurrencen</h6>
+				{{else}}
+					<h6>Du fik<span>&nbsp;<span class="quiz-score">0</span> point</span>, hvilket giver en samlet<span>&nbsp;<span class="quiz-rank">0</span> plads</span>!</h6>
+				{{/if}}
+			</div>	
+		</div>
+		<div id="campaignpoll"></div>
+	</figure>
+	<div class="ipno black" id="quizdone">
+			<div class="tc">
+			<h2 class="whitetext">Er du klogere end dine venner?</h2>
+			<p class="whitetext">Udfordr dine venner i quizzen ved at dele linket på Facebook og find ud af, hvem der løber med håneretten.</p>
+			<div class="pc50" style="overflow: auto">
+				<article><a id="sharefbAll"><button class="btnfacebook2">Inviter alle venner</button></a></article>
+				<article><a id="sharefbFriends"><button class="btnfacebook2">Inviter enkelte venner</button></a></article>
+			</div>
+		</div>
+	</div>	
+</div>
+<div data-state="finished-battle" style="display:none;">
+	<section id="h2h-status" class="pr">
+		<span data-user-h2h-id="{{battle.user.user_id}}">
+			<div class="hinfo hinfofix">
+				<h2>{{battle.user.name}}</h2>
+				<h3 id="quizwinner">{{battle.score}} POINT</h3>
+			</div>
+			<img participant-avatar-big src="{{battle.user.avatar_large}}" width="120" height="120" alt="{{battle.user.name}}">
+		</span>
+		<h4>VS</h4>
+		<span data-user-h2h-id="{{user.user_id}}">
+			<img participant-avatar-big  src="{{user.avatar_large}}" width="120" height="120" alt="{{user.name}}">
+			<div class="hinfo2" >
+				<h2>{{user.name}}</h2>
+				<h3 id="quizlooser"><span class="quiz-score">0</span> POINT</h3>
+			</div>
+		</span>
+	</section>
+	<div class="ipno lightblack" id="quizdone">
+			<div class="tc">
+				<p class="whitetext"><span data-battle-winner></span> slog <span data-battle-loser></span>... Hvor svært kan det være?</p>
+				<a href="/{{artist_slug}}/quiz/{{quiz_slug}}" class="restartQuiz"><button class="btngreen">Prøv quizzen igen</span></button></a>
+				<div class="pc50" style="overflow: auto">
+					<article><a id="sharefbAll"><button class="btnfacebook2">Inviter alle venner</button></a></article>
+					<article><a id="sharefbFriends"><button class="btnfacebook2">Inviter enkelte venner</button></a></article>
+				</div>				
+			</div>
+		</div>
+</div>
+{{#if spotify_url}}
+<div id="quizplayer">
+	<h5>Afspil musikken før du spiller, så du er rigtig klar!</h5>
+	<iframe src="https://embed.spotify.com/?uri={{spotify_url}}&amp;theme=white" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+</div>
+{{/if}}
+
+<form id="editmail" class="white-popup mfp-hide">
+	<section class="loginwrap">
+		<div class="editinfoheader">
+			<div class="tc">
+				<img id="popuplogo" src="https://static.musik.dk/upload/files/logo.svgz">
+			</div>
+			<h2>Kan vi kontakte dig, hvis du vinder?</h2>
+		</div>
+		<div class="ip-emailpopup">
+			<p class="whitetext">Er dette din nuværende mailadresse:</p>
+			<input type="email" id="user_email" placeholder="my@email.com" required name="email">
+			<p class="whitetext">Telefonnummer så vi kan ringe, hvis du har vundet:</p>
+			<input type="tel" placeholder="Dit telefonnummer" maxlength="8" minlength="8" pattern="\d{8}" name="phone" required>
+			<button type="submit" class="btngreen" style="margin-top:15px">Gem information og deltag!</button>
+		</div>
+	</section>
+</form>

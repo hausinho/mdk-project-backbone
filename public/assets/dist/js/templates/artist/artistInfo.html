@@ -1,0 +1,336 @@
+{{#when id "6735" "20499" }}
+<div id="cambgremix">
+	<div id="campaign">
+	{{#equal id "6735"}}
+		<img src="https://static.musik.dk/upload/artist_images/h/hedegaard_6735/1300x540_Hedegaard.jpeg">
+		 {{/equal}}
+		 {{#equal id "20499"}}
+		 <img src="https://static.musik.dk/upload/artist_images/b/brandon_beal_20499/1300x540_bb93.jpg">
+		 {{/equal}}
+		<div id="campaignremix"></div>
+	</div>  
+         
+	<div id="camrel" class="whitetext">
+		
+       <img id="camlogo" src="http://static.musik.dk/upload/files/various_temp/remix.svgz" alt="MusikDK logo">
+	     	
+		<div id="camremixp" style="overflow:auto">
+			<div class="tc">
+				<h3 style="font-size: 22px;line-height: 60px">VIL DU LAVE DET OFFICIELLE REMIX TIL "SMILE & WAVE"?</h3><br>
+				<h5 class="italic" style="font-size: 14px !important; font-weight:normal !important">Send os dit bud på et remix af Hedegaard & Brandon Beals store hit, ”Smile & Wave”, og få det udgivet som et officielt remix.<br> Med til præmien følger et honorar på 2500 kroner samt et års abonnement til Soundcloud.</h5>
+			</div>
+			<br />
+			<br />
+			
+			<!-- <h6 style="line-height: 30px">Brugernes remixes</h6> -->
+			
+	          	<div class="pc50">
+		          	
+		          	<article>
+						<p style="padding-bottom:15px;padding-right: 10px">Hedegaard & Brandon Beal har længe arbejdet sammen som producere og sangskrivere – og er lige nu også single-aktuelle sammen med sangen,  ”Smile & Wave”. Nu kalder de alle landets dygtige DJ’s og producere i jagten på et remix til tracket.<br><br>Du finder instrumental-sporene her på musik.dk. Når dit bud er klar, så uploader du filen på Soundcloud og tilføjer tracket til gruppen, som vi har linket til herunder. </p>
+					</article>
+		          
+		          	<article>
+						<p style="padding-bottom:15px;padding-left: 10px">I filen med de seks parts finder du også BPM.<br><br> Hedegaard og Brandon Beal vælger selv det bedste remix, der udgives som et officielt remix og vinderen modtager et honorar på 2500 kroner. Herudover følger et års Premium medlemskab til Soundcloud.<br><br>Deadline for upload er den 10. Juni. Vinderes offentliggøres på Hedegaard og Brandon Beals facebook profiler den 12. juni.</p>
+		          	</article> 
+	          	</div>
+	          	
+			
+			<div class="pc50">
+				<article>
+					<h4 style="line-height: 35px;font-weight: 700">Lyt til de 6 parts du kan downloade:</h4>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/108757520%3Fsecret_token%3Ds-u9879&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+					<a href="https://bit.ly/1ecNtVk" class="download" download target="_blank">
+						<button class="btngreen">Download parts</button>
+					</a>
+				</article>
+				<article>
+					<h4 style="line-height: 35px;font-weight: 700">Uploadede bruger-remixes:</h4>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/groups/204802&amp;color=e67e22&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+					<a href="https://soundcloud.com/groups/smile-wave-remix-competition" target="_blank">
+						<button class="btnblue" style="font-weight: 700">Klik her for at uploade dit remix</button>
+					</a>
+				</article>
+			</div>
+		</div>				
+	</div>
+</div>
+{{else}}
+<figure class="ti pr">
+	<div id="burnsbox">
+		{{#if images.cover}}
+		<img src="{{images.cover}}" alt="{{name}} på MusikDK" />
+		{{else}}
+		<img src="/demobilleder/hlowq.jpg" alt="{{name}} på MusikDK" />
+		{{/if}}			
+	</div>
+	{{#if contests}}
+	{{#shuffle contests}}
+	{{#each this}}
+	<div class="contests">
+		<div id="campaigncomp"></div>
+		<img id="camlogo2" src="https://static.musik.dk/upload/files/konkurrence.svgz" alt="MusikDK Konkurrence">
+		<figcaption class="metacamp">
+			<h2>{{title}}</h2>
+		</figcaption>
+		<a href="/konkurrencer/{{contest_id}}">
+			<div class="gotocomp"></div>
+		</a>
+	</div>
+
+	{{/each}}
+	{{/shuffle}}
+	{{else}}
+	<div class="mhlogo"></div>
+	<figcaption class="artistmeta">
+		<h1>{{name}}</h1>
+	</figcaption>
+	{{/if}}
+</figure>
+{{/when}}
+<div class="pr">
+	<!-- HØJRE KOLONNE -->
+	<section id="rightSection" class="fr w350">	
+		{{#when id "6735" "20499" }}
+		<div>
+			<a href="http://spinnup.com/en" target="_blank">
+				<img src="https://static.musik.dk/upload/files/various_temp/spinnup.jpg" style="vertical-align:middle">
+			</a>
+		</div>
+		{{/when}}
+		{{#equal id "17964"}}
+		<header class="h">
+			<span class="fe i-play hicon" aria-hidden="true"></span>
+			<h2>Best of TV-2</h2>
+		</header>
+		<iframe style="margin-left:-1px;" src="https://embed.spotify.com/?uri=spotify:user:digster.dk:playlist:0TfVOZULDZhf6oxUH3z4bg&amp;theme=white" width="350" height="480" frameborder="0" allowtransparency="true"></iframe>
+		{{/equal}}
+		{{#if campaignLinks}}
+		{{#specificServices campaignLinks "service" "Fona"}}
+			<header class="h">
+				<span class="fe i-cart hicon" aria-hidden="true"></span>
+				<h2>Find hos:</h2>
+			</header>
+			<div class="ip2">
+				{{#equal service 'Fona'}}
+					<a href="{{link}}" target="_blank"><button class="btnfona iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service 'Imusic'}}
+					<a href="{{link}}" target="_blank"><button class="btnimusic iebgfix">&nbsp;</button></a>
+				{{/equal}}
+			</div>
+		{{/specificServices}}
+		{{#equal id "17964"}}
+			<header class="h" style="margin-top: -55px;">
+				<span class="fe i-play hicon" aria-hidden="true"></span>
+				<h2>Afspil på</h2>				
+			</header>
+		{{else}}
+			<header class="h">
+				<span class="fe i-play hicon" aria-hidden="true"></span>
+				<h2>Afspil på</h2>				
+			</header>
+			{{/equal}}
+			<div class="ip2">				
+			{{#each campaignLinks}}
+				{{#equal service "Spotify"}}
+					<a href="{{link}}" target="_blank"><button class="btnspotify iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "ITunes"}}
+				<a href="{{link}}" target="_blank"><button class="btnitunes iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "Deezer"}}
+				<a href="{{link}}" target="_blank"><button class="btndeezer iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "WiMP"}}
+				<a href="{{link}}" target="_blank"><button class="btnwimp iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "TDC Play"}}
+				<a href="{{link}}" target="_blank"><button class="btntdcplay iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "YouMusic"}}
+				<a href="{{link}}" target="_blank"><button class="btnyoumusic iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "Rdio"}}
+				<a href="{{link}}" target="_blank"><button class="btnrdio iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "Telmore Musik"}}
+				<a href="{{link}}" target="_blank"><button class="btntelmore iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "Google Music"}}
+				<a href="{{link}}" target="_blank"><button class="btngooglemusic iebgfix">&nbsp;</button></a>
+				{{/equal}}
+				{{#equal service "Tidal"}}
+				<a href="{{link}}" target="_blank"><button class="btntidal iebgfix">&nbsp;</button></a>
+				{{/equal}}						
+			{{/each}}
+			</div>			
+		{{/if}}
+
+		{{#if concerts}}			
+		<!-- CONCERTS -->
+		<header class="h">
+			<span class="fe i-ticket hicon" aria-hidden="true"></span>
+			{{nextConcerts concerts}}
+		</header>
+		<div class="ip">			
+			<ul class="ll">
+			
+			{{#each concerts}}
+				<li class="carrow">
+					<article>
+					{{#equal delivery_status "Cancelled"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">AFLYST</div>
+					</div>
+					{{/equal}}
+					{{#equal delivery_status "Sold out"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">UDSOLGT</div>
+					</div>
+					{{/equal}}
+						<a href="{{deeplink}}" target="_blank">
+							<div class="cimage-small">
+								<img data-src="{{../images.thumb}}" class="lazyload" width="80" height="80" alt="{{../name}} på MusikDK">
+								<div class="ctime" datetime="{{date}}">{{dateFormatMonth date}}<span>{{dateFormatDay date}}</span></div>
+							</div>
+							<div class="clinfo-small">	 
+								<h3 class="clloc ellipsis">{{venue_name}}</h3>
+								<h4>{{venue_city}}</h4>
+								<h5>{{trimTime date}}</h5>
+							</div>							
+						</a>
+					</article>
+				</li>
+			{{/each}}
+			</ul>
+			<a href="/{{slug}}/koncerter">
+				<button class="btnblue" type="button">Find alle koncertdatoer</button>
+			</a>
+		</div>
+		<!-- CONCERTS END -->			
+		{{/if}}
+		{{#equal id "19068"}}
+
+		<header class="h">
+			<h2>Find 5SOS på Momio</h2>
+		</header>
+
+		<div class="ip tc">	
+			<a href="http://www.momio.me" target="_blank">
+				<img style="margin:5px 0 15px" src="https://static.musik.dk/upload/files/various_temp/mimioicon.jpg">
+			</a>
+			
+			<div class="pc50">
+				<article><a href="https://itunes.apple.com/dk/app/skymo/id675057601?mt=8" target="_blank"><img src="https://static.musik.dk/upload/files/various_temp/appstoreicon.svgz" width="130"></a></article>
+				<article><a href="https://play.google.com/store/apps/details?id=com.watagame.skymo&hl=en" target="_blank"><img src="https://static.musik.dk/upload/files/various_temp/playstoreicon.svgz" width="110"></a></article>
+			</div>
+		</div>	
+		{{/equal}}			
+		{{#if bio}}
+		<!-- BIOGRAPHY -->
+		<div>
+			<header class="h">
+				<span class="fe i-book hicon" aria-hidden="true"></span>
+				<h2>Biografi</h2>
+			</header>
+			<section class="ip">
+				<div class="artistBio">
+					<p>{{bio}}</p>
+				</div>
+				<br>
+				<p class="infotext floatright">Tekst fra Wikipedia</p>
+			</section>
+		</div>
+		<!-- BIOGRAHY END -->
+		{{/if}}
+		
+		{{#ifCondMultiple links.facebook "||" links.twitter "||" links.instagram "||" links.soundcloud}}
+		<!-- MUSIC SERVICES -->
+		<div>
+			<header class="h">
+				<span class="fe i-export hicon" aria-hidden="true"></span>
+				<h2>Links</h2>
+			</header>
+			<section class="ip4">
+				<table style="width: 100%">
+					<tbody>
+						<tr class="alink">
+							{{#if links.facebook}}
+							<td><a href="{{links.facebook}}" target="_blank"><i class="fblink roundedcorners"></i></a></td>
+							{{/if}}
+							{{#if links.twitter}}
+							<td><a href="{{links.twitter}}" target="_blank"><i class="twlink roundedcorners"></i></a></td>
+							{{/if}}
+							{{#if links.instagram}}
+							<td><a href="{{links.instagram}}" target="_blank"><i class="iglink roundedcorners"></i></a></td>
+							{{/if}}
+							{{#if links.soundcloud}}
+							<td><a href="{{links.souncloud}}" target="_blank"><i class="sclink roundedcorners"></i></a></td>
+							{{/if}}
+						</tr>	
+					</tbody>
+				</table>
+			</section>			
+		</div>
+		<!-- MUSIC SERVICES END -->
+		{{/ifCondMultiple}}
+	</section>		
+
+	<!-- Venstre kolonne-->
+	<section id="leftSection" class="mcl mr350">
+		<!-- RSS NEWS -->
+		<div id="rssDiv" class="pr">
+			<header class="h rlt">
+				<span class="fe i-open-book hicon" aria-hidden="true"></span>
+				<h2>Nyheder</h2>
+			</header>
+			<div class="tabs lt">
+				<div class="#1 artistNews"></div>			
+			</div>
+		</div>
+		<!-- RSS NEWS END-->		
+		{{#if videos}}
+		<!-- VIDEOS -->
+		<div class="pr">
+			<header class="h">
+				<span class="fe i-video hicon" aria-hidden="true"></span>
+				<h2>Videoer</h2>
+			</header>
+			<div class="tabs lt">
+				<div class="#1 artistVideos">
+					<div class="ip2 c video pc3to2">
+						{{#each videos}}
+						<article>
+							<a class="vidPopup" data-ytid="{{ytid}}">
+								<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{ytid}}/hqdefault.jpg" alt="{{title}}">
+								<div class="vidol">
+									<span>AFSPIL</span>
+								</div>
+								<div class="ellipsis">
+									<h3 class="vn">{{title}}</h3> <br>
+									<h3 class="van">{{../name}}</h3>
+								</div>
+								<span class="fe i-play cicon" aria-hidden="true"></span>
+							</a>
+						</article>
+						{{/each}}	
+					</div>
+				</div>			
+			</div>
+		</div>
+		<!-- VIDEOS END -->
+		{{/if}}
+		
+		<!-- SOCIAL UPDATES	 -->
+		<div id="socialMediaDiv">
+			<header class="h">
+				<span class="fe i-layout hicon" aria-hidden="true"></span>
+				<h2>Sociale opdateringer</h2>
+			</header>
+			<div id="supmain" class="socialMedia"></div>			
+		</div>
+		<!-- SOCIAL UPDATES	END -->
+					
+	</section>
+</div>

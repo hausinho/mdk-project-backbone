@@ -1,0 +1,72 @@
+/* BASE COLORS */
+/* MUSICSERVICE COLORS */
+/* OTHER COLORS */
+/* GRADIENT COLORS */
+.hgradient {
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(top, #ffffff 25%, #f5f5f5 100%);
+  background: linear-gradient(to bottom, #ffffff 25%, #f5f5f5 100%);
+}
+.hgradientreverse {
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(top, #f5f5f5 25%, #ffffff 100%);
+  background: linear-gradient(to bottom, #f5f5f5 25%, #ffffff 100%);
+}
+.digstergradient {
+  background: black;
+  background: -webkit-linear-gradient(top, #333333 0%, #000000 100%);
+  background: linear-gradient(to bottom, #333333 0%, #000000 100%);
+}
+.redgradient {
+  background: #ed1941;
+  background: -webkit-linear-gradient(top, #f03a5c 0%, #ed1941 100%);
+  background: linear-gradient(to bottom, #f03a5c 0%, #ed1941 100%);
+}
+.blackgradient {
+  background: #2c3e50;
+  background: -webkit-linear-gradient(top, #395067 0%, #2c3e50 100%);
+  background: linear-gradient(to bottom, #395067 0%, #2c3e50 100%);
+}
+/* SHADOWS */
+/* Rounded-borders */
+/* CSS3 Transitions */
+/* CSS3 Translate */
+.translate {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.translateX {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.translateY {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+/* Diverse */
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.twocolumns {
+  -moz-column-count: 2;
+  /* Firefox */
+  -webkit-column-count: 2;
+  /* Safari and Chrome */
+  column-count: 2;
+}
+.threecolumns {
+  -moz-column-count: 3;
+  /* Firefox */
+  -webkit-column-count: 3;
+  /* Safari and Chrome */
+  column-count: 3;
+}
+/*
+1 - LESS OBJECTS END
+////////////////////////////////////////////////////////////////////////////////////////////
+*/

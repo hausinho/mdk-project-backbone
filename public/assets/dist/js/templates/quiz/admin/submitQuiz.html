@@ -1,0 +1,123 @@
+<div id="submitQuizDiv" class="white-popup mfp-hide">
+	<form id="quizForm">
+		<section id="gs67g">
+			<div class="adminhtop blue">
+				<p>Opret simpel quiz</p>
+			</div>
+			
+			<!-- SET ARTIST AND CONNECT CORRECT ARTWORK -->
+			<header class="h">
+				<span class="fe i-star hicon" aria-hidden="true"></span>Vælg artist
+			</header>			
+			<div class="ip">
+				<div class="adinputfield">
+					<input type="text" placeholder="Artist name" data-set-artist-completion autocomplete="on" autofocus="true" id="contestArtistId" required></input>
+					<input type="hidden" data-set-artist-completion-value value="" name="artist_id">
+				</div>		
+			</div>
+			
+			<!-- COMPETITION INFO -->
+			<header class="h">
+				<span class="fe i-pencil hicon" aria-hidden="true"></span>Konkurrence info
+			</header>			
+			<div class="ip">
+			
+				<div class="aw05">
+					<h3>Titel:</h3>
+				</div>
+				<div class="adinputfield">
+					<input type="text" contenteditable="true" placeholder="Titel på konkurrencen" id="contestTitle" name="title" required></input>
+				</div>    
+				
+				<div class="aw05">
+					<h3>Beskrivelse:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" style="margin-bottom:0" id="contestDesc" name="description" maxlength="250" required></textarea>
+				</div>
+
+				<div class="aw05">
+					<h3>Spotify:</h3>
+				</div>
+				<div class="adinputfield">
+					<input type="text" placeholder="spotify:album:5AMOKSM1ftb3opIbGT2d4q" name="spotify_url"></input>
+				</div>
+				
+				<!-- <div class="aw05">
+					<h3>Is a contest quiz?</h3>
+				</div>
+				<div class="adinputfield">
+					<div class="checkaccept cacc1">
+						<label class="option">
+							<input type="checkbox" name="is_contest">
+								<span class="cbox"></span>
+						</label>
+					</div>
+				</div> -->
+
+			</div>	
+			
+			<header class="h">
+				<span class="fe i-calendar hicon" aria-hidden="true"></span>Questionnaire
+				<a class="btnblue" id="addQuestionnaire">Add</a>
+			</header>
+			<div class="ip">
+				<ul id="questionsHolder">
+				</ul>
+			</div>  
+			  
+			<!-- 	SET TIME (PLEASE CHECK SERVER FOR CORRECT TIME AND DATES!)  -->
+			<div data-is-contest-area style="display:none;">
+			<!-- is Contest Area -->
+				<header class="h">
+					<span class="fe i-calendar hicon" aria-hidden="true"></span>Deadline
+				</header>			
+				<div class="ip">
+					<div class="aw05 pc50">
+						<h3>Sæt slutdato</h3>
+				
+						<div class="adinputfield">
+							<input class="livedate datepicker" type="text" placeholder="Dato" id="setdate" name="endDate" data-required/>
+						</div>   
+					</div> 
+						 
+					<div class="aw05 pc50">
+						<h3>Sæt sluttidspunkt</h3> 
+						<div class="adinputfield">
+							<input class="livedate datepicker" type="text" placeholder="Tidspunkt" id="settime" name="endTime"/>
+						</div>   
+					</div>	      
+				</div> 
+				<!-- 	SET NUMBER OF AUTO-EMAILS TO WINNERS -->
+				<header class="h">
+					<span class="fe i-mail hicon" aria-hidden="true"></span>Antal af vindere
+				</header>			
+				<div class="ip2">
+					<p class="infotext">Antallet af vindere der skal kontaktes.</p>
+					<input type="number" name="winners" min="1" max="999" name="winners" data-required>	         
+				</div>		   
+				<!-- 	Toggle hidden section     -->
+				<div class="ip3" id="etxt">
+					<div class="wiztog">
+						<p id="showemailtext" href="#">Ændre emailtext</p>
+					</div>
+				</div>			
+
+				<!-- 	hidden" section -->
+				<div id="emailtext" style="display:none">
+					<div class="ip">
+						<div class="wookmark-placeholder tc adsep03">
+							<p>konkurrence@musik.dk<p>
+						</div>
+						<textarea rows="8" name="prize" contenteditable="true"></textarea>
+					</div>
+				</div>
+			<!-- End is Contest Area -->
+			</div>
+			<div class="ip">
+				<button type="submit" class="btnblue btncontest">Opret quiz</button>
+			</div>
+
+		</section> 
+	</form>	
+</div>

@@ -1,0 +1,196 @@
+<div id="acmenuwrap">
+	<ul id="acmenu">
+		<li>
+			{{#if images.cover}}
+			<img width="60" src="{{images.cover}}" alt="{{name}} på MusikDK" />
+			{{else}}
+			<img src="/demobilleder/hlowq.jpg" alt="{{name}} på MusikDK" />
+			{{/if}}
+		</li>
+		<li>
+			<h1>{{name}}</h1>
+		</li>
+		<li>
+			<a href="/{{slug}}/">
+				<h2>Oversigt</h2>
+			</a>
+		</li>
+		{{#if sections.videos}}
+		<li>
+			<a href="/{{slug}}/videoer">
+				<h2>Videoer</h2>
+			</a>
+		</li>
+		{{/if}}
+		{{#if sections.releases}}
+		<li>
+			<a href="/{{slug}}/udgivelser">
+				<h2>Udgivelser</h2>
+			</a>
+		</li>
+		{{/if}}
+		{{#if sections.releases}}		
+		<li>
+			<a href="/{{slug}}/koncerter">
+				<h2>Koncerter</h2>
+			</a>		
+		</li>
+		{{/if}}
+		{{#if sections.merchandise}}		
+		<li>
+			<a href="/{{slug}}/merchandise">
+				<h2>Merchandise</h2>
+			</a>		
+		</li>
+		{{/if}}
+		<li>
+			<a href="/{{slug}}/polls">
+				<h2 class="selected">Afstemning</h2>
+			</a>	
+		</li>
+	</ul>
+</div>
+<div id="accw">
+	<section id="cm">
+	{{#equal id "17964"}}
+	<div id="vcambgpoll">
+		<div id="campaign">
+			<img src="https://static.musik.dk/upload/files/various_temp/tv2/tv2bg.png">
+			<div id="campaignpoll"></div>
+		</div>
+		<div id="vpollTop">
+			<div class="ip fl" style="width:250px">
+				<img src="https://static.musik.dk/upload/files/various_temp/tv2/tv2_detgodeliv.jpg" height="250" width="250"></img>
+				<button class="btngreen gotoShop">Forudbestil signeret album</button>
+			</div>
+			<div class="ip fl pollInfo">
+				<p class="pollTitle">{{poll.title}}</p>
+				<p class="pollDescription">{{poll.description}}</p>
+			</div>			
+			<div class="clear"></div>
+		</div>
+		<div id="vpollContent">
+			<div id="vpollDiv">
+			   <ul class="vpolllist">
+				{{#each poll.pollItems}}
+					<li>
+						<div>
+							<div id="vprogressDiv">
+								<div id="vprogresspoll" data-procentage="{{percentage}}"></div>								
+							</div>
+							<div class="vpollw">
+								{{#if voted}}
+								<div class="vpollactive" data-poll-item-id="{{pollItemId}}"></div>
+								{{else}}
+								<div class="vpoll" data-poll-item-id="{{pollItemId}}"></div>
+								{{/if}}
+								<br />
+								<div class="vpolltitle">{{pollTitle}}</div>
+								<div id="fbShareDiv">
+									{{#equal pollTitle 'Frederikshavn'}}
+									<a class="btnfacebook2" data-image="tv2_frederikshavn2" style="">Del</a>
+									{{/equal}}
+									{{#equal pollTitle 'Kolding'}}
+									<a class="btnfacebook2" data-image="tv2-kolding2" style="">Del</a>
+									{{/equal}}
+									{{#equal pollTitle 'Roskilde'}}
+									<a class="btnfacebook2" data-image="tv2-roskilde2" style="">Del</a>
+									{{/equal}}
+									{{#equal pollTitle 'Skanderborg'}}
+									<a class="btnfacebook2" data-image="tv2-skanderborg2" style="">Del</a>
+									{{/equal}}
+									{{#equal pollTitle 'Svendborg'}}
+									<a class="btnfacebook2" data-image="tv2-svendborg2" style="">Del</a>
+									{{/equal}}
+								</div>							
+							</div>
+						</div>
+
+
+					</li>
+					{{/each}}
+				</ul>				
+			</div>
+		</div>		
+	</div>
+<!-- 		<div id="cambgpoll">
+			<div id="campaign">
+				<img src="{{images.cover}}">
+				<div id="campaignpoll"></div>
+			</div>
+			<div id="camrel" class="pollcenter">
+				<div style="text-align:center">
+					<p>{{poll.title}}</p>
+					<p>{{poll.description}}</p>
+				</div> 
+				<div>
+				   <ul class="vpolllist">
+					{{#each poll.pollItems}}
+						<li>
+							<div class="pollw">
+								<div id="vprogresspoll2" data-procentage="{{percentage}}"></div>
+								<div id="vprogresspoll" data-procentage="{{percentage}}"></div>								
+								{{#if voted}}
+								<div class="vpollactive" data-poll-item-id="{{pollItemId}}"></div>
+								{{else}}
+								<div class="vpoll" data-poll-item-id="{{pollItemId}}"></div>
+								{{/if}}
+								<br />
+								<div class="vpolltitle">{{pollTitle}}</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>				
+				</div>
+			</div>
+		</div> -->
+	{{else}}
+		<div id="cambgpoll">
+			<div id="campaign">
+				<img src="{{images.cover}}">
+				<div id="campaignpoll"></div>
+			</div>       
+			<div id="camrel" class="pollcenter">
+				<div class="pc50 ipno" id="pollspacer">
+					<article>
+						<p>{{poll.title}}</p>
+					</article> 
+			    	<article>
+						<p>
+							<span>{{poll.description}}</span>
+					</article> 
+				</div>	
+				
+				   <ul class="polllist">
+					{{#each poll.pollItems}}
+						<li>
+							<div class="pollw">
+								<div id="progresspoll" data-procentage="{{percentage}}"></div>								
+								{{#if voted}}
+								<div class="pollactive" data-poll-item-id="{{pollItemId}}"></div>
+								{{else}}
+								<div class="poll" data-poll-item-id="{{pollItemId}}"></div>
+								{{/if}}
+								<br />
+								<div class="polltitle">{{pollTitle}}</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+			</div>
+		</div>
+	{{/equal}}		
+	</section>
+</div>
+
+<div id="maxvotespopup" class="white-popup mfp-hide">
+	<div id="compdonepopup" style="padding: 0;width:400px;background: #2c3e50"> 
+		<img src="https://static.musik.dk/upload/files/various_temp/tv2/tv2header.png" width="400">
+		<div class="ip">
+			<h3 style="font-size: 16px;text-transform: uppercase">Din stemme er registeret <br>og du deltager nu i konkurrencen!</h3><br><br><br>
+			<p style="font-size: 12px;">Få et ekstra lod i konkurrencen når du forudbestiller <b>"Det Gode Liv”</b> på CD. Albummet leveres direkte til døren i signeret udgave.</p><br>
+			<br>
+			<button class="btngreen gotoShop">Forudbestil signeret album <br>til 129 kr inkl forsendelse</button>
+		</div>
+	</div>
+</div>

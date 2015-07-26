@@ -1,0 +1,70 @@
+<!-- - CONTEST POPUP - -->
+<div id="imageContest" class="white-popup mfp-hide">
+	<form id="imageContestForm" method="post">
+		<input type="hidden" name="type" value="image"></input>
+		<section id="gs67g">
+			<div class="adminhtop blue">
+				<p>Opret billede konkurrence</p>
+			</div>
+			
+			<!-- SET ARTIST AND CONNECT CORRECT ARTWORK -->
+			<header class="h">
+				<span class="fe i-star hicon" aria-hidden="true"></span>Vælg artist
+			</header>			
+			<div class="ip">
+				<div class="adinputfield">
+					<input type="text" placeholder="Artist name" autocomplete="on" autofocus="true" id="imageContestArtistId" required></input>
+					<input type="hidden" value="" name="artist_id">
+				</div>		
+			</div>
+			
+			<!-- COMPETITION INFO -->
+			<header class="h">
+				<span class="fe i-pencil hicon" aria-hidden="true"></span>Konkurrence info
+			</header>			
+			<div class="ip">
+			
+				<div class="aw05">
+					<h3>Titel:</h3>
+				</div>
+				<div class="adinputfield">
+					<input type="text" contenteditable="true" placeholder="Titel på Billed konkurrencen" id="imageContestTitle" name="title" required></input>
+				</div>    
+				
+				<div class="aw05">
+					<h3>Beskrivelse:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" style="margin-bottom:0" id="imageContestDesc" name="description" maxlength="250" required></textarea>
+				</div> 				     
+				
+			</div>	  
+			  
+			<!-- 	SET TIME (PLEASE CHECK SERVER FOR CORRECT TIME AND DATES!)  -->
+			<header class="h">
+				<span class="fe i-calendar hicon" aria-hidden="true"></span>Deadline
+			</header>			
+			<div class="ip">
+				<div class="aw05 pc50">
+					<h3>Sæt slutdato</h3>
+			
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" placeholder="Dato" id="setdate" name="endDate" required/>
+					</div>   
+				</div> 
+					 
+				<div class="aw05 pc50">
+					<h3>Sæt sluttidspunkt</h3> 
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" placeholder="Tidspunkt" id="settime" name="endTime"/>
+					</div>   
+				</div>	      
+			</div>
+
+			<div class="ip">
+				<button type="submit" class="btnblue btnimgcontest">Opret billed konkurrence</button>
+			</div>
+			
+		</section> 
+	</form>	
+</div>

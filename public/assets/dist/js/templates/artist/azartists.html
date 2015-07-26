@@ -1,0 +1,18 @@
+<div class="artistsWrap">
+	{{#if this.length}}
+	<ol class="aslist">
+		{{#each this}}
+		<li>
+			<p>
+				<a href="/{{slug}}">{{name}}</a>
+			</p>
+		</li>
+		{{/each}}
+	</ol>
+	{{else}}
+	<div class="ipemptystate">
+		<h6>Ingen artister fundet</h6>
+	</div>
+	{{/if}}
+</div>
+

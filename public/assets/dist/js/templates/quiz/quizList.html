@@ -1,0 +1,11 @@
+<ul>
+{{#each this}}	
+	<li>
+		<a href="/{{artist.slug}}/quiz/{{slug}}"> 
+			<img data-src="{{artist.artist_thumb}}" src="{{artist.artist_thumb}}"  width="200" alt="{{artist_image}}">
+			<h2>{{title}}</h2>
+			<p>{{description}}</p>
+		</a>
+	</li>
+{{/each}}
+</ul>

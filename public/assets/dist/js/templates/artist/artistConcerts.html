@@ -1,0 +1,75 @@
+
+		<div class="pr">
+			 <figure class="ti">
+				<img class="lazyload" src="https://static.musik.dk/upload/files/live.jpg" alt="{{artist_name}} på MusikDK">				
+			 </figure>
+			 <div id="campaignlive"></div>
+			 {{#unless concerts}}
+			 <div id="nextlive">
+				<span>
+					  <h3>Der er ingen kommende koncerter</h3>
+				</span>
+			</div>			 
+			{{else}}
+			<div id="nextlive">			
+				<span>
+					{{#each concerts}}
+					{{#if @first}}
+					  <time datetime="{{date}}">{{dateFormatFull date}}</time>
+					  <h2>{{venue_name}}</h2>
+					  <h3>{{venue_city}}</h3>
+					{{/if}}
+					{{/each}}
+				</span>
+			</div>
+			{{/unless}}
+		</div>
+		<header class="h ltr">
+			<span class="fe i-ticket hicon" aria-hidden="true"></span>
+			<h2>Alle koncerter</h2>
+		</header>
+		{{#unless concerts}}
+		<div class="ip">
+			<div class="tc">
+				<span class="fe i-three-dots emptystate-big" aria-hidden="true"></span>
+			</div>
+		</div>		
+		{{else}}
+		<div class="ip2 clive pc50list">		
+			<ul class="ll">
+			{{#each concerts}}
+				<li class="noc">
+					{{#equal delivery_status "Cancelled"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">AFLYST</div>
+					</div>
+					{{/equal}}
+					{{#equal delivery_status "Sold out"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">UDSOLGT</div>
+					</div>
+					{{/equal}}						
+					<div class="cimage">
+						<img data-src="{{../images.thumb}}" class="lazyload" width="120" height="120" alt="Se {{../name}} på MusikDK">
+						<time datetime="{{date}}">{{dateFormatMonth date}}<span>{{dateFormatDay date}}</span></time>
+					</div>	
+					<div class="clinfo">		 
+						<h3>{{venue_name}}</h3>
+						<h4>{{venue_city}}</h4>
+						<h5>{{trimTime date}}</h5>
+					</div>
+					{{#equal delivery_status "Normal"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticgreen"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Few"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticyellow"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Waiting list"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticredwait"></div></a>
+					{{/equal}}			
+				</li>
+			{{/each}}
+			</ul>
+		</div>
+		{{/unless}}
+		<div class="infotext fr ip">Koncerter importeres automatisk og er derfor ikke altid 100% korrekte.</div>

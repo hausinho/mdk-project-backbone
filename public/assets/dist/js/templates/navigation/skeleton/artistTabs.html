@@ -1,0 +1,88 @@
+<div class="fr">
+	<img id="acmlogo" src="https://static.musik.dk/upload/files/logodark.svgz">
+</div>
+<ul id="acmenu">
+	<li id="acnavimg">
+		<a href="/{{slug}}/">
+			{{#if images.cover}}
+			<img width="60" src="{{images.cover}}" alt="{{name}}" />
+			{{else}}
+			<img src="/demobilleder/hlowq.jpg" />
+		{{/if}}
+		</a>
+	</li>
+	<li id="acsep"></li>
+	<li>
+		<a href="/{{slug}}/">
+			<h2>Oversigt</h2>
+		</a>
+	</li>
+	{{#if sections.videos}}		
+	<li>
+		<a href="/{{slug}}/videoer">
+			<h2>Videoer</h2>
+		</a>
+	</li>
+	{{/if}}
+	{{#if sections.releases}}		
+	<li>
+		<a href="/{{slug}}/udgivelser">
+			<h2>Udgivelser</h2>
+		</a>
+	</li>
+	{{/if}}
+	<li>
+		<a href="/{{slug}}/koncerter">
+			<h2>Koncerter</h2>
+		</a>
+	</li>
+	{{#if sections.merchandise}}		
+	<li>
+		<a href="/{{slug}}/merchandise">
+			<h2>Merchandise</h2>
+		</a>
+	</li>
+	{{/if}}
+	{{#if sections.polls}}		
+	<li>
+		<a href="/{{slug}}/afstemning">
+			<h2>Afstemning</h2>
+		</a>
+	</li>
+	{{/if}}
+	{{#if sections.quizzes}}		
+	<li>
+		<a href="/{{slug}}/quiz">
+			<h2>Quiz</h2>
+		</a>
+	</li>
+	{{/if}}
+	{{#equal id "10454"}}
+	<li>
+		<a href="/{{slug}}/rebelheartyourself" >
+			<h2>Rebel Heart Yourself</h2>
+		</a>
+	</li>		
+	{{/equal}}
+	{{#equal id "11909"}}
+	<li>
+		<a href="/{{slug}}/konkurrence" >
+			<h2>Konkurrence</h2>
+		</a>
+	</li>		
+	{{/equal}}
+	{{#equal id "9869"}}
+	<li>
+		<a href="/{{slug}}/sexii" >
+			<h2>Sexii</h2>
+		</a>
+	</li>		
+	{{/equal}}		
+	{{#equal id "19068"}}
+	<li>
+		<a href="/{{slug}}/setlist" >
+			<h2>Sætliste</h2>
+		</a>
+	</li>		
+	{{/equal}}		
+</ul>

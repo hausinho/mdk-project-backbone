@@ -1,0 +1,16 @@
+{{#each this}}
+<li class="c comp">
+	<a href="#konkurrencer/{{contest_id}}"> 
+		<!-- ARTIST IMAGE-->
+		{{#if artist.artist_thumb}}
+		<img class="lazyload" data-src="{{artist.artist_thumb}}" src="{{artist.artist_thumb}}" width="200" height="200" alt="{{formated_name}}">
+		{{else}}
+		<img class="lazyload" src="http://dev.denmark.umgwebservices.com/musikdk/demobilleder/hlowq.jpg" width="200" height="200" />
+		{{/if}}
+		<!-- TITLE-->
+		<h2>{{title}}</h2>
+		<!-- DECRIPTION -->
+		<p>{{description}}</p>
+	</a>
+</li>	
+{{/each}}

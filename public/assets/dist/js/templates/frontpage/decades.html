@@ -1,0 +1,16 @@
+{{#shuffle this}}
+{{#each this}}
+<article>
+	<a href="/{{slug}}">
+		<img class="lazyload" data-src="{{images.thumb}}"  width="78" height="78" alt="{{name}}">
+		<div class="artistol">
+			<span>Se artist</span>
+		</div>
+		<div class="ellipsis">
+			<h2 class="an">{{name}}</h2>
+		</div>
+	</a>
+</article>
+{{/each}}
+{{/shuffle}}
+<button class="btnwhite btnmore btndecades" type="button">Vis flere artister</button>		

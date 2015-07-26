@@ -1,0 +1,36 @@
+<div id="imgpop" class="white-popup">
+	<section class="ppw-small">
+		<div class="pr">
+			<section class="mr300">
+				<figure class="compuplppu">
+					<img data-src="{{image_url}}" src="{{image_url}}" alt="{{user.name}}">
+				</figure>
+			</section>
+			<aside>
+				<section class="cr w300" style="overflow:auto">
+					<div>
+						<header class="h" style="border-top:none"><span class="fe i-user hicon" aria-hidden="true"></span><h2>Uploader</h2></header>
+						<section class="ip2">
+							<figure class="userc">
+								<img data-src="{{user.avatar_large}}" src="{{user.avatar_large}}" width="268" alt="{{user.name}}">
+								<h1>{{user.name}}</h1>
+							</figure>              
+							<figcaption class="usercompname"></figcaption>
+						</section>					
+					</div>
+					<div>
+						<header class="h"><span class="fe i-shareable hicon" aria-hidden="true"></span><h2>Like / Del </h2></header>
+						<div class="ip" style="min-height:400px">
+							<fb:like id="fb-share" href="{{url}}" data-width="250" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></fb:like>
+						</div>
+	<!-- 					<header class="h"><span class="fe i-pencil hicon" aria-hidden="true"></span><h2>Kommentarer</h2></header>
+						<div class="ip">
+							<fb:comments id="fb-comments" href="{{url}}" width="250" colorscheme="light"></fb:comments>
+						</div> -->					
+					</div>
+
+				</section>
+			</aside>
+		</div>
+	</section>
+</div>

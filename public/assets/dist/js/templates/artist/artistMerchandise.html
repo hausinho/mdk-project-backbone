@@ -1,0 +1,38 @@
+
+<div class="pr">
+	<figure class="ti">
+		<img data-src="https://static.musik.dk/upload/files/various_temp/merchheader.jpg" src="https://static.musik.dk/upload/files/various_temp/merchheader.jpg" alt="{{name}} på MusikDK">
+		<div id="campaignpoll"></div>		
+	</figure>
+	 <div id="nextlive">
+			<span>
+				  <h2 class="productCount"></h2>
+			</span>
+	</div>
+	</div>
+<header class="h rlt">
+	<span class="fe i-cart hicon" aria-hidden="true"></span>
+	<h2>Merchandise</h2>
+</header>
+<div id="merch" class="ip c standard pc4to3">
+	<ul id="suptiles">
+		{{#each merchandise}}
+		<li>
+			<a href="{{deeplink}}" target="_blank">
+				<img class="lazyload" data-src="{{picture_path}}" src="{{picture_path}}" alt="{{name}}">
+				<div class="blackol">
+					<span>MERE INFO</span>
+				</div>
+				<div class="ellipsis">
+					<h2 class="vn">{{artist_name}} ({{name}})</h2><br>
+					<h2 class="price">{{price_local_formatted}} kr</h2>
+					<h2 class="van">{{shop_name}}</h2>
+				</div>
+				<span class="fe i-cart cicon" aria-hidden="true"></span>
+			</a>			
+		</li>
+		{{/each}}				
+	</ul>
+</div>	
+
+<div class="infotext fr ip">Alle priser og produkter indhentes automatisk og vi kan derfor ikke garantere for rigtigheden af alle priser og produkter.</div>

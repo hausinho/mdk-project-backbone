@@ -1,0 +1,203 @@
+
+<div class="pr">
+	{{#each this}}
+	{{#random featured}}
+	<figure class="ti pr">
+		<div id="burnsbox">
+			<img src="{{images.cover}}" alt="{{name}}" />		
+		</div>
+		<div class="mhlogo"></div>
+		<figcaption class="metacomp">
+			<h2>MusikDK anbefaler</h2>
+			<h1>{{name}}</h1>
+		</figcaption>
+			<a href="/{{slug}}/" class="gotoArtist">
+				<div class="goto"></div>
+			</a>		
+	
+	</figure>
+	{{/random}}
+	{{/each}}
+	
+	<div>
+		<header class="h rlt">
+			<span class="fe i-open-book hicon" aria-hidden="true"></span>
+			<span>Nyheder</span>
+		</header>
+
+		<div class="ipno pc33 news c pr">
+		{{#each this}}
+			{{#each news}}
+				<article>
+					<a href="{{link}}" target="_blank">
+						<img class="lazyload" data-src="{{thumb}}"  width="100" height="100" alt="{{title}}">
+						<h4>{{source_name}}</h4>
+						<h2>{{title}}</h2>
+						<time class="newstime" datetime="{{pubDate}}">{{dateFromNow pubDate}}</time>
+						<span class="fe i-export cicon pa" aria-hidden="true"></span>
+					</a>
+				</article>
+			{{/each}}
+			{{/each}}
+			<button class="btnwhite btnmore btnrss" type="button">Vis flere nyheder</button>
+		</div>	
+	</div>
+	{{#each this}}
+	{{#if contests}}
+	<div>
+		<header class="h">
+			<span class="bluedot" aria-hidden="true">&nbsp;&nbsp;&nbsp;</span>
+			Konkurrencer
+		</header>
+		<div class="ip2 c comp pr">
+			<ul>
+			{{#random contests}}
+				<li style="height: 200px">
+					<a href="/konkurrencer/{{contest_id}}"> 
+						<div class="fl pr ct_img">
+							{{#if artist.thumb}}
+							<img class="lazyload" data-src="{{artist.thumb}}" width="200" height="200" alt="{{artist.name}}" />
+							{{else}}
+							<img class="lazyload" data-src="/assets/images/default_thumb.gif" width="200" height="200" />
+							{{/if}}						
+						</div>
+						<div class="ct_cnt">
+							<h2>{{{title}}}</h2>
+							<p class="ct_desc">{{{description}}}</p>
+						</div>
+					</a>
+				</li>
+			{{/random}}			
+			</ul>
+		</div>
+		<div class="ip3 compBtnDiv" style="display:none;">
+			<a href="/konkurrencer">
+				<button class="btnblue" type="button">
+					<span style="margin-left:15px">Gå til konkurrencer</span><span class="buttonicon" data-icon="V" aria-hidden="true"></span>
+				</button>
+			</a>
+		</div>	
+	</div>
+	{{/if}}
+	{{/each}}
+	<div>
+		<header class="h">
+			<span class="fe i-video hicon redtext" aria-hidden="true"></span>
+			Nye videoer
+		</header>
+
+		<div class="ip2 c pc4to3 singleVideos pr">
+			{{#each this}}   
+				{{#each videos}}
+			<article class="video">
+				<a class="vidPopup" data-ytid="{{youtube_id}}">
+					<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{youtube_id}}/mqdefault.jpg" alt="{{title}}">
+					<div class="vidol">
+						<span>AFSPIL</span>
+					</div>
+					<div class="ellipsis">
+						<h2 class="vn">{{title}}</h2><br>
+						<h2 class="van">{{name}}</h2>
+					</div>
+					<span class="fe i-play cicon" aria-hidden="true"></span>
+				</a>
+			</article>
+				{{/each}}			
+		{{/each}}
+		</div>
+		<div class="ip3 pr">
+			<button class="btnwhite btnmore btnvid" type="button">Vis flere videoer</button>
+		</div>
+	</div>
+
+	<div class="pr">
+		<header class="h ltr fl">
+			<span class="fe i-star hicon" aria-hidden="true"></span>
+			Artister | Genre
+		</header>
+		<div class="tabs lt clear">
+			<ul class="genresList">
+				<li><a data-name="poprock" class="genre selected">Pop/Rock</a></li>
+				<li><a data-name="alternative" class="genre">Alternative</a></li>
+				<li><a data-name="electronic" class="genre">Dance/Electro</a></li>
+				<li><a data-name="hiphop" class="genre">HipHop</a></li>
+				<li><a data-name="rnbsoul" class="genre">Rnb/Soul</a></li>
+				<li><a data-name="jazzblues" class="genre">Jazz & Blues</a></li>
+				<li><a data-name="world" class="genre">World</a></li>
+				<li><a data-name="classical" class="genre">Klassisk</a></li>
+			</ul>
+		</div>
+		<div class="ipno c pc4to3 genres pr"></div>
+	</div>
+
+	<div class="pr">
+		<header class="h ltr fl">
+			<span class="fe i-star hicon" aria-hidden="true"></span>
+			Artister | År
+		</header>
+		<div class="tabs lt">
+			<ul class="decadesList">
+				<li><a data-name="2010"class="decade selected">10'erne</a></li>
+				<li><a data-name="2000" class="decade">00'erne</a></li>
+				<li><a data-name="1990" class="decade">90'erne</a></li>
+				<li><a data-name="1980" class="decade">80'erne</a></li>
+				<li><a data-name="1970" class="decade">70'erne</a></li>
+				<li><a data-name="1960" class="decade">60'erne</a></li>
+				<li><a data-name="1950" class="decade">50'erne</a></li>
+			</ul>
+		</div>
+		<div class="ipno c pc4to3 decades"></div>
+	</div>
+
+	<div class="pr">
+		<header class="h rlt">
+			<span class="fe i-ticket hicon" aria-hidden="true"></span>
+			Kommende koncerter
+		</header>
+
+		<div class="ip clive pc50list pr">	
+			<ul class="ll">
+				{{#each this}}
+				{{#each concerts}}
+				<li class="noc">
+					{{#equal delivery_status "Cancelled"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">AFLYST</div>
+					</div>
+					{{/equal}}
+					{{#equal delivery_status "Sold out"}}
+					<div class="ribbonWrapRed">
+						<div class="ribbonRed">UDSOLGT</div>
+					</div>
+					{{/equal}}					
+					<div class="cimage">
+						<img class="lazyload" data-src="{{artist.thumb}}"  width="120" height="120" alt="{{name}}">
+						<time datetime="{{date}}">{{dateFormatMonth date}}<span>{{dateFormatDay date}}</span></time>
+					</div> 	
+					<div class="clinfo-front">	
+						<h2>{{artist.name}}</h2>
+						<h3 class="ellipsis">{{venue_name}} ({{venue_city}})</h3>
+						<h5>{{trimTime date}}</h5>
+					</div>
+					{{#equal delivery_status "Normal"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticgreen"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Few"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticyellow"></div></a>
+					{{/equal}}
+					{{#equal delivery_status "Waiting list"}}
+					<a href="{{deeplink}}" target="_blank"><div class="ticredwait"></div></a>
+					{{/equal}}	
+				</li>
+				{{/each}}
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="ip3">
+			<button class="btnwhite btnmore btnlive" type="button">Vis flere koncerter</button>
+		</div>		
+	</div>
+
+</div>
+

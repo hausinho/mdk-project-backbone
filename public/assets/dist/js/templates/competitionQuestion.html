@@ -1,0 +1,135 @@
+{{#ifExpired status}}
+<div class="pr">
+	<figure class="ti tc pr">
+		{{#if artist.artist_cover}}
+		<img src="{{artist.artist_cover}}"  style="border-top:none" alt="{{artist.artist_name}}">
+		{{else}}
+		<img src="/assets/images/default_cover.gif" />
+		{{/if}}
+		<div class="archivecomp">
+			<h2>Denne konkurrence er ikke længere aktiv</h2>	
+		</div>
+	</figure>
+	{{#if usersParticipating}}
+	<!-- ADMIN NUMBER OF PARTICIPATORS -->
+	<div id="admincompinfo">
+		<h3>{{usersParticipating}}</h3>
+		<h6>deltager</h6>
+	</div>
+	<!-- END ADMIN NUMBER OF PARTICIPATORS -->
+	{{/if}}
+	<div class="ip-large">
+		<div class="pure50">
+			<h2>Om konkurrencen:</h2><br><br>
+			<p>{{{description}}}</p>	
+		</div>
+
+		<div class="pure25">
+			<h2>Spørgsmål:</h2><br><br>
+			<p>{{question.title}}</p>
+		</div>
+	</div>
+</div>
+
+{{else}}
+<div class="pr">
+	<figure class="ti tc pr">
+		<ul class="countdown">
+		  <li>
+			<span class="days"></span>
+			<p class="timeRefDays"></p>
+		  </li>
+		  <li>
+			<span class="hours"></span>
+			<p class="timeRefHours"></p>
+		  </li>
+		  <li>
+			<span class="minutes"></span>
+			<p class="timeRefMinutes"></p>
+		  </li>
+		  <li>
+			<span class="seconds"></span>
+			<p class="timeRefSeconds"></p>
+		  </li>
+		</ul>	
+		<!--  IF ADMIN STATEMENT FOR WHEEL ICON
+		<span data-mfp-src="#" class="font-entypo icon-cog ti-admin-cog" aria-hidden="true"></span>
+		-->
+		{{#if artist.artist_cover}}
+		<img src="{{artist.artist_cover}}" style="border-top:none" alt="{{artist.artist_name}}">
+		{{else}}
+		<img src="/assets/images/default_cover.gif" />
+		{{/if}}
+		<figcaption class="meta" style="border-right:none">
+			<h2 style="font-size:35px" class="contestTxt">{{title}}</h2>
+		</figcaption>
+	</figure>
+	{{#if usersParticipating}}
+	<!-- ADMIN NUMBER OF PARTICIPATORS -->
+	<div id="admincompinfo">
+		<h3>{{usersParticipating}}</h3>
+		<h6>deltager</h6>
+	</div>
+	<!-- END ADMIN NUMBER OF PARTICIPATORS -->
+	{{/if}}
+</div>		
+
+<div class="ip-large">
+	<div class="pure50">
+		<h2>Om konkurrencen:</h2><br><br>
+		<p>{{{description}}}</p>	
+	</div>
+
+	<div class="pure25">
+		<h2>Spørgsmål:</h2><br><br>
+		<p>{{{question.title}}}</p>
+	</div>
+
+	<div class="pure25">
+		<h2>Vælg dit svar:</h2><br><br>
+		{{#each question.answers}}
+			<button class="btnwhite" data-answer-id="{{answer_id}}">{{answer}}</button>
+		{{/each}}
+	</div>
+</div>
+
+{{/ifExpired}}
+
+<div class="ipno compfooter">
+	<a href="/{{artist.artist_slug}}">
+		<button class="btnblue">Gå til <span> {{artist.artist_name}}</span> på <span>MusikDK</span></button>
+	</a>	
+ </div>
+
+<form id="editmail" class="white-popup mfp-hide">
+	<section class="loginwrap">
+		<div class="editinfoheader">
+			<div class="tc">
+				<img id="popuplogo" src="https://static.musik.dk/upload/files/logo.svgz">
+			</div>
+			<h2>Kan vi kontakte dig, hvis du vinder?</h2>
+		</div>
+		<div class="ip-emailpopup">
+			<p class="whitetext">Er dette din nuværende mailadresse:</p>
+			<input type="email" id="user_email" placeholder="my@email.com" required name="email">
+			<p class="whitetext">Modtag også en gratis SMS, hvis du vinder:</p>
+			<input type="tel" placeholder="Dit telefonnummer" maxlength="8" minlength="8" pattern="\d{8}" name="phone">
+			<button type="submit" class="btngreen" style="margin-top:15px">Gem information og deltag!</button>
+		</div>
+	</section>
+</form>
+
+<div id="donepopup" class="white-popup mfp-hide">
+	<div id="compdonepopup">
+		<figure></figure>
+		<a href="https://musik.dk/{{artist.artist_slug}}/"><button class="btnblue">Se mere med {{artist.artist_name}}</button></a>
+	</div>
+</div>
+
+<div id="errorpopup" class="white-popup mfp-hide">
+	<div id="comperrorpopup">
+		<figure></figure>
+		<a href="https://musik.dk/{{artist.artist_slug}}/"><button class="btnblue">Se mere med {{artist.artist_name}}</button></a>
+	</div>
+</div>
+

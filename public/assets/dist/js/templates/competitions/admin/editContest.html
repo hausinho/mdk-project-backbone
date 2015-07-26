@@ -1,0 +1,132 @@
+
+
+<div id="editContestDiv" class="white-popup mfp-hide">
+	<form id="editContestForm" method="post" >
+		<input type="hidden" value="{{contest_id}}" name="contest_id"></input>
+		<section id="gs67g">
+			<div class="adminhtop blue">
+				<p>Redigér konkurrence</p>
+			</div>
+			
+			<!-- SET ARTIST AND CONNECT CORRECT ARTWORK -->
+			<header class="h">
+				<span class="fe i-star hicon" aria-hidden="true"></span>Artist (ikke redigerbar)
+			</header>			
+			<div class="ip">
+				<div class="adinputfield">
+					{{#equal type "image"}}
+					<input type="text" name="artist_name" value="{{artist.formated_name}}" disabled style="opacity:0.6"></input>
+					{{else}}
+					<input type="text" name="artist_name" value="{{artist.artist_name}}" disabled style="opacity:0.6"></input>
+					{{/equal}}
+				</div>		
+			</div>
+			
+			<!-- COMPETITION INFO -->
+			<header class="h">
+				<span class="fe i-pencil hicon" aria-hidden="true"></span>Konkurrence info
+			</header>			
+			<div class="ip">
+			
+				<div class="aw05">
+					<h3>Titel:</h3>
+				</div>
+				<div class="adinputfield">
+					<input type="text" value="{{title}}" contenteditable="true" placeholder="Titel på konkurrencen" id="contestTitle" name="title" required></input>
+				</div>    
+				
+				<div class="aw05">
+					<h3>Beskrivelse:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" style="margin-bottom:0" id="contestDesc" name="description" maxlength="250" required>{{description}}</textarea>
+				</div> 				
+				{{#equal type "text"}}	  
+				<div class="aw05">
+					<h3>Spørgsmål:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" style="margin-bottom:0" id="contestQuestion" name="question" required>{{question.title}}</textarea>
+				</div>          
+						
+				<div class="aw05">
+					<h3>Svar:</h3>
+					<span> (check for rigtige svar)</span>
+				</div>
+				<div id="editAnswerDiv">
+				{{#each question.answers}}
+					<div class="adinputfield83">
+						<span class="fe i-circled-cross adaddnextremove2" aria-hidden="true"></span>
+						<div class="checkaccept cacc1">
+							<label class="option">
+							{{#equal correct true}}
+								<input type="radio" id="contestAnswerChk_1" name="correct" checked="checked" required >
+							{{else}}
+							<input type="radio" id="contestAnswerChk_1" name="correct"  required >
+							{{/equal}}
+									<span class="cbox"></span>
+							</label>
+						</div>
+						<input type="text" value="{{answer}}" id="{{answer_id}}" name="answer" placeholder="Skriv svarmulighed" contenteditable="true" required></input>					
+					</div>	
+				  {{/each}}
+				</div>
+				<span class="fe i-plus adaddnext2" aria-hidden="true"></span>				  
+				{{/equal}}
+			</div>	  
+			  
+			<!-- 	SET TIME (PLEASE CHECK SERVER FOR CORRECT TIME AND DATES!)  -->
+			<header class="h">
+				<span class="fe i-calendar hicon" aria-hidden="true"></span>Deadline
+			</header>			
+			<div class="ip">
+				<div class="aw05 pc50">
+					<h3>Sæt slutdato</h3>
+			
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" value="{{contestEndDate endDate}}" placeholder="Dato" id="setdate" name="endDate" required/>
+					</div>   
+				</div> 
+					 
+				<div class="aw05 pc50">
+					<h3>Sæt sluttidspunkt</h3> 
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" value="{{contestEndTime endDate}}" placeholder="Tidspunkt" id="settime" name="endTime"/>
+					</div>   
+				</div>	      
+			</div>
+								 
+			<!-- 	SET NUMBER OF AUTO-EMAILS TO WINNERS -->
+			{{#equal type "text"}}	  
+			<header class="h">
+				<span class="fe i-mail hicon" aria-hidden="true"></span>Antal af vindere
+			</header>			
+			<div class="ip2">
+				<p class="infotext">Antallet af vindere der skal kontaktes.</p>
+				<input type="number" name="prize_winners" min="1" max="999" required value="{{prize.prize_winners}}">	         
+			</div>
+				   
+			<!-- 	Toggle hidden section     -->
+			<div class="ip3" id="etxt">
+				<div class="wiztog">
+					<p id="showemailtext" class="showemailtext" href="#">Ændre emailtext</p>
+				</div>
+			</div> 	
+												
+			<!-- 	hidden" section -->
+			<div id="emailtext" style="display:none">
+				<div class="ip">
+					<div class="wookmark-placeholder tc adsep03">
+						<p>konkurrence@musik.dk<p>
+					</div>
+					<textarea id="prize" rows="8" contenteditable="true" name="prize_name">{{prize.prize_name}}</textarea>
+				</div>
+			</div> 
+			{{/equal}}
+			<div class="ip">
+				<button type="submit" class="btnblue btnEditContest">Gem ændringer</button>
+			</div>
+			
+		</section> 
+	</form>	
+</div>

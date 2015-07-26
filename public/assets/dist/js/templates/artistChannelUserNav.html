@@ -1,0 +1,47 @@
+
+{{#if logged}}
+	<li>
+		<a class="logout">Log Ud</a>	
+	</li>
+	<li>
+		<a href="#">
+			<img class="navpp" src="{{user.avatar}}" width="18" alt="{{user.name}} avatar"/><span class="navpptxt">{{user.name}}</span>
+		</a>
+	</li>
+{{else}}
+	<li class="acnavfix">
+		<a class="login" id="acsignupblue">Log Ind</a>	
+	</li>
+
+{{/if}}
+
+<div id="loginbox" class="white-popup mfp-hide">
+	<section class="loginwrap">
+		<div class="actionlogin">
+			<h2>Log ind</h2>
+		</div>
+		<div class="ipno">
+			<button class="bigbtn btnfacebook" onclick="hello('facebook').login( {scope: 'email, publish' } );">Forbind med Facebook</button><br><br>
+			<button class="btngoogle" onclick="hello('google').login();">Forbind med Google</button>
+		</div>
+		<div id="pterms" class="tc ip">
+			<h3>Ved at oprette en profil accepterer du vores <a target="_blank" href="/terms">Vilkår</a></h3>
+		</div>
+	</section>
+</div>
+
+<div id="signupbox" class="white-popup mfp-hide">
+	<section class="loginwrap">
+		<div class="actionlogin condition">
+			<h2>Du skal være logget ind for at deltage</h2>
+		</div>
+		<div class="ip">
+			<button class="bigbtn btnfacebook" onclick="hello('facebook').login({scope: 'email, publish' });">Log ind / Tilmeld med Facebook</button><br><br>
+			<button class="btngoogle" onclick="hello('google').login();">Log ind / Tilmeld med Google</button>
+		</div>
+		<div  class="tc ip" id="pterms">
+			<h3>Ved at oprette en profil accepterer du vores <a target="_blank" href="/terms">Vilkår</a></h3>
+		</div>			
+	</section>
+</div>
+

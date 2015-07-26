@@ -1,0 +1,17 @@
+{{#each this}}
+
+<article>
+	<a class="vidPopup" href="https://www.youtube.com/watch?v={{video_youtube_id}}">
+		<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{video_youtube_id}}/hqdefault.jpg" alt="{{title}}">
+		<div class="vidol">
+			<span>AFSPIL</span>
+		</div>
+		<div class="ellipsis">
+			{{titleSplit video_title}}
+		</div>
+		<span class="fe i-play cicon" aria-hidden="true"></span>
+	</a>
+</article>
+
+{{/each}}
+<button class="btnwhite btnmore">Vis flere videoer</button>

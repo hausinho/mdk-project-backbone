@@ -1,0 +1,560 @@
+/* IMPORT MAIN LESS-codes*/
+/* BASE COLORS */
+/* MUSICSERVICE COLORS */
+/* OTHER COLORS */
+/* GRADIENT COLORS */
+.hgradient {
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(top, #ffffff 25%, #f5f5f5 100%);
+  background: linear-gradient(to bottom, #ffffff 25%, #f5f5f5 100%);
+}
+.hgradientreverse {
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(top, #f5f5f5 25%, #ffffff 100%);
+  background: linear-gradient(to bottom, #f5f5f5 25%, #ffffff 100%);
+}
+.digstergradient {
+  background: black;
+  background: -webkit-linear-gradient(top, #333333 0%, #000000 100%);
+  background: linear-gradient(to bottom, #333333 0%, #000000 100%);
+}
+.redgradient {
+  background: #ed1941;
+  background: -webkit-linear-gradient(top, #f03a5c 0%, #ed1941 100%);
+  background: linear-gradient(to bottom, #f03a5c 0%, #ed1941 100%);
+}
+.blackgradient {
+  background: #2c3e50;
+  background: -webkit-linear-gradient(top, #395067 0%, #2c3e50 100%);
+  background: linear-gradient(to bottom, #395067 0%, #2c3e50 100%);
+}
+/* SHADOWS */
+/* Rounded-borders */
+/* CSS3 Transitions */
+/* CSS3 Translate */
+.translate {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.translateX {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.translateY {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+/* Diverse */
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.twocolumns {
+  -moz-column-count: 2;
+  /* Firefox */
+  -webkit-column-count: 2;
+  /* Safari and Chrome */
+  column-count: 2;
+}
+.threecolumns {
+  -moz-column-count: 3;
+  /* Firefox */
+  -webkit-column-count: 3;
+  /* Safari and Chrome */
+  column-count: 3;
+}
+/*
+1 - LESS OBJECTS END
+////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/* ADMIN CONTENT FEATURES */
+#admincompinfo {
+  background: #ed1941;
+  text-align: center;
+  font: 700 12px 'Noto Sans', sans-serif;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-radius: 99px;
+  padding: 15px;
+  color: white;
+  border: 3px double #d21035;
+}
+#admincompinfo h3 {
+  display: block;
+}
+#admincompinfo h6 {
+  font-size: 10px;
+  font-weight: 300;
+}
+.adminhtop {
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  border-radius: 2px;
+}
+.adminhtop span {
+  color: #f5f5f5;
+  font-size: 65px;
+  line-height: 90px;
+}
+.adminhtop p {
+  color: #f5f5f5;
+  font-size: 20px;
+  line-height: 90px;
+}
+.adinputfield input,
+.adinputfield25 input,
+.adinputfield90face input,
+.adinputfield90yout input,
+.adinputfield90twit input,
+.adinputfield90insta input {
+  margin: 7px 0 0 0;
+  padding: 12px;
+  font-size: 1em;
+  display: inline-block;
+  width: 90%;
+}
+.adinputfield input {
+  width: 100%;
+}
+.adinputfield25 input {
+  width: 25%;
+}
+.adaddnextface,
+.adaddnextyout,
+.adaddnexttwit,
+.adaddnextinsta {
+  font-size: 30px;
+  padding: 9px 10px 0 0;
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+  opacity: 0.5;
+}
+.adaddnextremoveface,
+.adaddnextremoveyout,
+.adaddnextremovetwit,
+.adaddnextremoveinsta {
+  font-size: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+  padding: 11px 5px 0 0;
+  color: #ed1941;
+  opacity: .5;
+  display: none;
+}
+.adaddnextface:hover,
+.adaddnextremoveface:hover,
+.adaddnextyout:hover,
+.adaddnextremoveyout:hover,
+.adaddnexttwit:hover,
+.adaddnextremovetwit:hover,
+.adaddnextinsta:hover,
+.adaddnextremoveinsta:hover {
+  opacity: 1;
+}
+.adinputfield90 input {
+  width: 90%;
+}
+.adinputfield83 input {
+  width: 83%;
+}
+.adinputfield25 input {
+  width: 25%;
+}
+.adinputfield63 input {
+  width: 63%;
+  padding: 7px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.adaddnext,
+.adaddnext2 {
+  font-size: 30px;
+  padding: 5px 0 0 0;
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+  opacity: 0.5;
+}
+.adsep01 {
+  padding: 30px;
+  margin: 25px 0 0 0;
+}
+.adsep02 {
+  padding: 5px;
+  margin: 25px 0;
+}
+.adsep03 {
+  padding: 30px;
+}
+.adsep04 {
+  padding: 30px;
+  margin: 0 0 25px 0;
+}
+.avid453 {
+  font-style: italic;
+  font-size: 11px;
+  display: block;
+}
+.adaddnextremove,
+.adaddnextremove2 {
+  font-size: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+  padding: 5px 0 0 0;
+  color: #ed1941;
+  opacity: 0.5;
+}
+.adaddnext:hover,
+.adaddnext2:hover,
+.adaddnextremove:hover,
+.adaddnextremove2:hover {
+  opacity: 1;
+}
+.aw05 {
+  margin-top: 15px;
+}
+.aw05 span {
+  color: #888;
+  font-size: 12px;
+  float: right;
+}
+li.aw05 {
+  padding: 20px 0 0;
+}
+#e7s34f {
+  margin: 0 auto;
+  width: 600px;
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+#fah76,
+#sg34s,
+#gs67g {
+  margin: 25px auto;
+  width: 500px;
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+#gs67g {
+  height: auto;
+}
+#sg34s {
+  border-top: 10px solid #ed1941;
+}
+.sg437 {
+  margin-top: 10px;
+  height: 125px;
+}
+.st43 {
+  margin: 15px 0;
+  font-size: 13px;
+}
+.name27d {
+  font-size: 28px;
+  padding-top: 17px;
+  margin-left: 25px!important;
+}
+.name243 {
+  font-size: 20px;
+  padding-top: 55px;
+  color: #777777;
+  margin-left: 25px!important;
+}
+.admailingtext {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 5px;
+  font-size: 13px;
+}
+.admtxtmeta {
+  padding: 15px;
+  display: block;
+  background: #dddddd;
+  border-radius: 3px;
+  -moz-column-count: 2;
+  /* Firefox */
+  -webkit-column-count: 2;
+  /* Safari and Chrome */
+  column-count: 2;
+}
+.admtxtmeta p {
+  font-size: 13px;
+  display: block;
+}
+.admtxtmeta span {
+  font-size: 13px;
+  padding-right: 5px;
+  font-weight: 700;
+}
+.admailmeta {
+  font-style: italic;
+  display: block;
+  margin-top: -15px;
+  font-size: 11px;
+  padding: 5px 0 20px;
+}
+.adainfo {
+  padding: 15px;
+  margin-bottom: 15px;
+  color: #dcdcdc;
+  display: block;
+  background: #2c3e50;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 43%;
+}
+.adainfo span {
+  color: white;
+  font-weight: 700;
+  padding-right: 6px;
+  font-size: 50px;
+  display: block;
+  float: left;
+  margin: 7px 10px 0 0;
+}
+/* ADMIN NAVIGATION */
+.adnavred {
+  background: red !important;
+}
+.adnavgreen {
+  background: green !important;
+}
+.adnavyellow {
+  background: #f0dc00 !important;
+}
+.adnavyellow h6,
+.adnavyellow span {
+  color: black;
+}
+.adminicon {
+  padding-right: 7px;
+}
+.adminnavtext {
+  text-transform: uppercase;
+}
+#navimgupl img {
+  width: 140px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.adminnav li {
+  position: relative;
+}
+.adminnav li a {
+  float: left;
+  font-family: arial;
+  height: 22px;
+  padding: 12px 14px 7px 14px;
+  color: #f5f5f5;
+  font-size: 12px;
+  line-height: 20px;
+}
+ul.nw.adminnav ul {
+  top: 41px;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  background: #f5f5f5;
+  width: 300px;
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-radius: 0 0 3px 3px;
+}
+.adminnav li:hover ul {
+  visibility: visible;
+}
+.adminnav li:hover a {
+  color: #111;
+}
+.adminnav li ul li {
+  width: 45.5%;
+  float: none;
+  margin: 3px 2px 2px 4px;
+  padding-right: 4px;
+}
+.adminnav li ul li:nth-child(2n+2) {
+  margin-left: 0;
+}
+.adminnav li ul li a {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.adminnav li ul li p {
+  padding: 4px 8px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.adminnav li:hover > a {
+  color: #2c3e50;
+  background: #f5f5f5;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* CHAT MODERATION */
+.chatmod {
+  list-style: none;
+  overflow-x: scroll;
+  height: 382px;
+  width: 286px;
+}
+.chatmod li {
+  margin-bottom: 10px;
+}
+.chatmod p {
+  font-size: 11px;
+}
+.chatmod h3 {
+  font-size: 11px;
+  font-weight: 700;
+}
+.chatmod li ul li {
+  list-style: none;
+  display: inline;
+  padding-right: 19px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.chatmod li ul li h4 {
+  color: #1abc9c;
+}
+.chatmod li ul li h5 {
+  color: #3498db;
+}
+.chatmod li ul li h6 {
+  color: #ed1941;
+}
+.chatmod li ul li h4:hover,
+.chatmod li ul li h5:hover,
+.chatmod li ul li h6:hover {
+  opacity: .7;
+}
+/* PRELISTEN */
+.pluploaddrd li {
+  list-style: none;
+  height: 50px;
+}
+li.sortable-placeholder {
+  border: 1px dashed #CCC;
+  background: none;
+}
+.pluploaddrd li input {
+  width: 87%;
+  float: left;
+  margin: 4px 0;
+}
+.pldrdicon:before {
+  content: '\2630';
+  font-family: 'entypo';
+  speak: none;
+  font-size: 35px;
+  color: #888;
+  padding: 7px 8px 0 0;
+  -webkit-font-smoothing: antialiased;
+  float: left;
+  cursor: move;
+}
+.pldrdicon:hover:before {
+  color: #2c3e50;
+}
+.pldrdicon {
+  cursor: move;
+}
+.pldeleteicon {
+  cursor: pointer;
+}
+.pldeleteicon:before {
+  content: '\2716';
+  font-family: 'entypo';
+  speak: none;
+  font-size: 20px;
+  color: #dddddd;
+  padding: 12px 0 0 8px;
+  float: right;
+  -webkit-font-smoothing: antialiased;
+}
+.pldeleteicon:hover:before {
+  color: red;
+}
+#plcheckmargin {
+  margin: 20px 0;
+}
+p.pldone:after,
+p.plundone:after {
+  content: '\2713';
+  font-family: 'entypo';
+  speak: none;
+  color: green;
+  padding-left: 8px;
+}
+p.plundone:after {
+  content: '\2715';
+  color: red;
+}
+/* VARIOUS */
+.adacmeta {
+  font-style: italic;
+  font-size: 10px;
+  color: #888;
+}
+.adcolumns3 {
+  -webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 3;
+  /* Firefox */
+  column-count: 3;
+}
+.ti-admin-cog {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: .8;
+}
+.ti-admin-cog:hover {
+  opacity: 1;
+}
+/* POPUPS */
+.wiztoggle {
+  cursor: pointer;
+  margin-top: 25px;
+  display: block;
+}
+.wiztog p {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  color: #888888;
+}
+.wiztog p:before {
+  content: '\2b';
+  speak: none;
+  font-family: 'entypo';
+  padding-right: 8px;
+}
+.cacc1 {
+  margin: 15px 15px 0 0;
+  float: left;
+}

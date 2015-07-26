@@ -1,0 +1,14 @@
+{{#each this}}
+<article>
+	<img class="lazyload" data-src="{{image.large.[0]}}" src="{{image.large.[0]}}" alt="{{title}}">
+	<div class="digol">
+		<span class="suitable">
+			<h2 class="playList" data-link="/digster/playlist/{{slug}}">Se playliste</h2>
+<!-- 			<h5>eller afspil direkte på Spotify</h5>
+			<iframe class="playlistSpotify lazyload" data-src="" width="80" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+		</span>
+	</div>
+	<a href="" class="digsterPlay" target="_blank"><button class="btndigster">Afspil</button></a>
+</article>
+{{/each}}
+<button class="btnwhite btnmore btnplaylists">Vis flere playlister</button>

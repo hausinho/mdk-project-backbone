@@ -1,0 +1,17 @@
+<!-- <figure class="tc pr">
+	<div id="burnsbox">
+		<img src="{{artist.images.cover}}" alt="{{artist.name}}">
+	</div>
+	<div id="quiztitles">
+		<ul>
+			<li class="chart" data-percent="100"><span>1000</span>POINT<canvas height="240" width="240" style="height: 120px; width: 120px;"></canvas></li>
+		</ul>
+		<h2>{{question.question}}</h2>
+	</div>
+	<div id="campaignpoll"></div>
+</figure> -->
+<!-- <div class="ipno black" data-answers style="display:none;"> -->
+{{#each question.answers}}
+<button class="btngreen" data-answer-id="{{quiz_answer_id}}">{{title}}</button>
+{{/each}}
+<!-- </div> -->

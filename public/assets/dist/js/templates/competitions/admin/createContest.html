@@ -1,0 +1,152 @@
+<!-- - CONTEST POPUP - -->
+<div id="simplecontestwiz" class="white-popup mfp-hide">
+	<form id="contestForm" method="post" >
+		<input type="hidden" name="type" value="text"></input>
+		<section id="gs67g">
+			<div class="adminhtop blue">
+				<p>Opret simpel konkurrence</p>
+			</div>
+			
+			<!-- SET ARTIST AND CONNECT CORRECT ARTWORK -->
+			<header class="h">
+				<span class="fe i-star hicon" aria-hidden="true"></span>Vælg artist
+			</header>			
+			<div class="ip">
+				<div class="adinputfield">
+					<input type="text" placeholder="Artist name" autocomplete="on" autofocus="true" id="contestArtistId" required></input>
+					<input type="hidden" value="" name="artist_id">
+				</div>		
+			</div>
+			
+			<!-- COMPETITION INFO -->
+			<header class="h">
+				<span class="fe i-pencil hicon" aria-hidden="true"></span>Konkurrence info
+			</header>			
+			<div class="ip">
+			
+				<div class="aw05">
+					<h3>Titel:</h3>
+				</div>
+				<div class="adinputfield">
+					<input type="text" contenteditable="true" placeholder="Titel på konkurrencen" id="contestTitle" name="title" required></input>
+				</div>    
+				
+				<div class="aw05">
+					<h3>Beskrivelse:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" style="margin-bottom:0" id="contestDesc" name="description" maxlength="250" required></textarea>
+				</div> 				
+							  
+				<div class="aw05">
+					<h3>Spørgsmål:</h3>
+				</div>
+				<div class="adinputfield">
+					<textarea rows="4" contenteditable="true" placeholder="Indtast spørgsmål her" style="margin-bottom:0" id="contestQuestion" name="question" required></textarea>
+				</div>          
+						
+				<div class="aw05">
+					<h3>Svar:</h3>
+					<span> (check for rigtige svar)</span>
+				</div>
+				<div id="answerDiv">	
+					<div class="adinputfield83">
+						<div class="checkaccept cacc1">
+							<label class="option">
+								<input type="radio" id="" name="correct" required>
+									<span class="cbox"></span>
+							</label>
+						</div>
+						<input type="text" id="contestAnswer_1" placeholder="Skriv svarmulighed" contenteditable="true" required></input>					
+						<span class="fe i-plus adaddnext" aria-hidden="true"></span>	 
+					</div>			
+				</div>
+			</div>	  
+			  
+			<!-- 	SET TIME (PLEASE CHECK SERVER FOR CORRECT TIME AND DATES!)  -->
+			<header class="h">
+				<span class="fe i-calendar hicon" aria-hidden="true"></span>Deadline
+			</header>			
+			<div class="ip">
+				<div class="aw05 pc50">
+					<h3>Sæt slutdato</h3>
+			
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" placeholder="Dato" id="setdate" name="endDate" required/>
+					</div>   
+				</div> 
+					 
+				<div class="aw05 pc50">
+					<h3>Sæt sluttidspunkt</h3> 
+					<div class="adinputfield">
+						<input class="livedate datepicker" type="text" placeholder="Tidspunkt" id="settime" name="endTime"/>
+					</div>   
+				</div>	      
+			</div>
+								 
+			<!-- 	Toggle hidden section     -->
+<!-- 			<div class="ip3" id="apd">
+				<div class="wiztog">
+					<p id="showpubtime" href="#">Add publication date</p>
+				</div>       
+			</div>		
+								
+			<!-- hidden" section -->
+<!-- 			<div id="pubtime" style="display:none">
+					
+				<div class="ip">
+			
+					<div class="wookmark-placeholder tc adsep03">
+						<p>If there's no publication date,<br>the competition will start right away.<p>
+					</div>
+
+					<div class="aw05 pc50"><h3>Set publication date</h3>
+				
+						<div class="adinputfield" style="margin-right:5px">
+							<input class="livedate" type="text" placeholder="Startdato" id="setdate" name="publicationDate" />
+						</div>   
+					</div> 
+						 
+					<div class="aw05 pc50">
+						<h3>Set publication time</h3> 
+						<div class="adinputfield">
+							<input class="livedate" type="text" placeholder="Tidspunkt" id="settime" name="publicationTime"/>
+						</div>   
+					</div>
+				</div>	  
+						  
+			</div> -->
+								 
+			<!-- 	SET NUMBER OF AUTO-EMAILS TO WINNERS -->
+			<header class="h">
+				<span class="fe i-mail hicon" aria-hidden="true"></span>Antal af vindere
+			</header>			
+			<div class="ip2">
+				<p class="infotext">Antallet af vindere der skal kontaktes.</p>
+				<input type="number" name="winners" min="1" max="999" name="winners" required>	         
+			</div>
+				   
+			<!-- 	Toggle hidden section     -->
+			<div class="ip3" id="etxt">
+				<div class="wiztog">
+					<p id="showemailtext" href="#">Ændre emailtext</p>
+				</div>
+			</div>			
+												
+			<!-- 	hidden" section -->
+			<div id="emailtext" style="display:none">
+				<div class="ip">
+					<div class="wookmark-placeholder tc adsep03">
+						<p>konkurrence@musik.dk<p>
+					</div>
+					<textarea rows="8" name="prize" contenteditable="true">Ambitioni dedisse scripsisse iudicaretur. Gallia est omnis divisa in partes tres, quarum. Fictum,  deserunt mollit anim laborum astutumque! Excepteur sint obcaecat cupiditat non proident culpa.</textarea>
+				</div>
+			</div>
+
+			<div class="ip">
+				<button type="submit" class="btnblue btncontest">Opret konkurrence</button>
+			</div>
+			
+		</section> 
+	</form>	
+</div>

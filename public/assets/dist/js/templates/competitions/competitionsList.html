@@ -1,0 +1,31 @@
+{{#if this}}
+<ul>
+	{{#each this}}
+		<li style="height:200px">
+			<div>
+				<a href="/konkurrencer/{{contest_id}}"> 
+				<div class="fl pr ct_img">
+					<!-- ARTIST IMAGE-->
+					{{#if artist.images.thumb}}
+					<img class="lazyload" data-src="{{artist.images.thumb}}" width="200" height="200" alt="{{artist.formated_name}}" />
+					{{else}}
+					<img class="lazyload" src="/assets/images/default_thumb.gif" width="200" height="200" />
+					{{/if}}
+				</div>
+				<div class="ct_cnt">
+					<!-- TITLE-->
+					<h2>{{{title}}}</h2>
+					<!-- DECRIPTION -->
+					<p class="ct_desc">{{{description}}}</p>
+				</div>
+				</a>		
+			</div>
+		</li>	
+	{{/each}}
+</ul>
+{{else}}
+<div class="ipemptystate">
+	<h6>Der er ingen konkurrencer pt.</h6>
+</div>
+{{/if}}
+<!-- -->

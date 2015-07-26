@@ -1,0 +1,155 @@
+<div id="shopcheckout" class="white-popup">
+	<!-- 	SHOP -->
+	<section id="shopwrap">
+		<div data-checkout-proccess>
+			<!-- LEFT SIDE	 -->
+			<div class="fl pr">
+				<!-- 		Product image - left -->
+				<img id="shopimg" src="{{images.0.url}}">
+				<!-- 		Product price -->
+				<div id="shopprice"><h4 class="price-item">{{price}} {{currency}}</h4><span>inkl. forsendelse</span>  </div>
+				<!-- 		Product name -->
+				<div id="shoppname">
+					<h1>{{artistname}}</h1>
+					<h2>{{title}}</h2>
+				</div>
+			</div>
+			<!-- ////// STEP 1 - INFORMATION	- START	////// -->
+			<!-- RIGHT SIDE		 -->
+			<div class="ml300">
+				<!-- 		INFO -->
+				<div id="shopinfo" class="pr">
+					<form data-form-checkout-step data-checkout-step="1" data-error-validation-msg="Du mangler at accepterer vores handelsbetingelser" novalidate>
+						<header class="hshop"><span class="fe i-cart hicon" aria-hidden="true"></span>Information <!-- <span class="hiconright">1/3</span> --></header>
+						<div class="ip">
+							<div class="pc50">
+								<article class="shopdelivery">
+									<h5>Forventet levering:</h5>
+									<h6>Din ordre sendes op til udgivelsesdatoen</h6>
+								</article>
+								<article class="shopdelivery">
+									<h5>Spørgsmål?</h5>
+									<h6>Så kontakt os <a href="https://musikdk.zendesk.com/hc/da/requests/new" target="_blank">her</a></h6>
+								</article>
+							</div>
+							<article class="shopdelivery">
+								<h5>I shoppen kan du betale med:</h5>
+								<img src="https://static.musik.dk/assets/images/shop/cards.png" width="230" alt="kortlogoer">
+							</article>
+							<!-- 					SHOPDETAILS -->
+							<div id="shopdetails">
+								<!-- 					<img src="demobilleder/beatlessquare.jpg">	 -->
+								<div id="detailmargin">
+									<h2>{{item.title}}</h2>
+									<h6>Antal</h6>
+									<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="1" max="99"><span class="input-number-increment">+</span>
+									<h4 class="price-item">{{price}} {{currency}}</h4>
+								</div>
+								<ul>
+									<li>
+										Forsendelse:
+										<span>{{ship_price}} {{currency}}</span>
+									</li>
+									<li id="totalVAT">
+										Heraf moms (25%):
+										<span>{{VAT}} {{currency}}</span>
+									</li>
+								</ul>
+							</div>
+							<div id="totalsum">
+								<h5>TOTAL<span>{{total}} {{currency}}</span></h5>
+							</div>
+						</div>
+						<div id="shopnext">
+							<!-- 		ACCEPT TERMS		 -->
+							<div class="checkaccept" id="shopterms">
+								<label class="option">
+									<input type="checkbox" name="terms" required>
+									<span class="cbox"></span>
+								</label>
+								<!-- 	        IF NO CUSTOM TERMS-->
+								<p>Jeg har læst og accepterer <a href="https://musikdk.zendesk.com/hc/da/articles/201921162" target="_blank"> handelsbetingelserne</a>.</p>
+
+								<!-- <!-- 	        IF CUSTOM TERMS  (LAST ONE) -->
+								<!-- <p>Jeg har læst og accepterer <a href="#" target="_blank"> handelsbetingelser</a> og <a href="#" target="_blank">vilkår</a>.</p> -->
+							</div>
+							<button type="submit" class="btngreen" data-checkout-goto-step="2">Gå videre til adresseoplysninger</button>
+						</div>
+					</form>
+					<!-- ////// STEP 1 - INFORMATION	- END	////// -->
+					<!-- ////// STEP 2 -->
+					<form data-form-checkout-step data-checkout-step="2" data-error-validation-msg="Alle felter er ikke udfyldt korrek" novalidate>
+						<header class="hshop"><span class="fe i-mail hicon" aria-hidden="true"></span>Personlig information <!-- <span class="hiconright">2/3</span> --></header>
+						<div class="ip2">
+							<h5 class="shopinputtitle">Email</h5>
+							<input class="shopinput" type="email" value="{{email}}" placeholder="Din emailadresse" required="required" name="email">
+							<h5 class="shopinputtitle">Mobilnummer</h5>
+							<input class="shopinput" type="tel" value="{{phone}}" placeholder="Dit telefonnummer" maxlength="8" name="phone">
+						</div>
+						<header class="hshop"><span class="fe i-address hicon" aria-hidden="true"></span>
+						{{#equal shop_item_id "1"}}
+						Adresse
+						{{else}}
+						Faktureringsadresse {{/equal}}<!-- <span class="hiconright">2/3</span> --></header>
+						<div id="shopfixedaddress">
+							<div class="ip2">
+								<h5 class="shopinputtitle">Dit fulde navn</h5>
+								<input class="shopinput" type="text" placeholder="Dit fulde navn" value="{{name}}" name="name" required="required" data-check-blur="([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+)\s+([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+)" data-error-validation-msg="Indsæt både fornavn og efternavn">
+								<h5 class="shopinputtitle">Søg din adresse frem</h5>	
+								<input class="shopinput" id="checkout_address" type="text" placeholder="Din adresse" value="{{address}}" required>
+								{{#equal shop_item_id "1"}}
+								<!-- TEMP REMOVED -->
+								<div class="tc">
+									<p id="useredittoggle" href="#">Anden leveringsadresse?</p>
+								</div>	
+								<div id="usereditshow">
+									<h5 class="shopinputtitle">Navn / Virksomhed</h5>
+									<input class="shopinput" name="name_additional" type="text" placeholder="Dit fulde navn">
+									<h5 class="shopinputtitle">Søg din adresse frem</h5>	
+									<input class="shopinput" id="checkout_address_additional" type="text" placeholder="Din adresse">
+								</div>
+								{{/equal}}
+								{{#equal shop_item_id "2"}}
+								<p style="font-size: 12px;opacity: .8">
+									Søg din adresse frem og vælg på næste side, hvilken butik pakken skal leveres til.
+								</p>
+								{{/equal}}
+							</div>
+						</div>
+						<div id="shopnext">
+							{{#equal shop_item_id "1"}}
+							<button type="submit" class="btngreen" data-checkout-goto-step="3">Gå til betaling</button>
+							{{else}}
+							<button type="submit" class="btngreen" data-checkout-goto-step="3">  Vælg Leveringssted</button>
+							{{/equal}}
+
+						</div>
+					</form>
+					<div data-form-checkout-step data-checkout-step="3" id="step-3" data-error-validation-msg="Alle felter er ikke udfyldt korrek" novalidate>
+					</div> 
+				</div>
+			</div>
+		<!-- 	SHOP -->
+		</div>
+		<section data-checkout-payment style="display:none;background:white;height:450px;">
+			<form id="qk_form" action="https://secure.quickpay.dk/form/" method="post">
+				<input type="hidden" name="autocapture" value="0"/>
+				<input type="hidden" name="msgtype" value="authorize"/>
+				<input type="hidden" name="protocol" value="5">
+				<input type="hidden" name="language" value="da">
+				<input type="hidden" name="merchant" value="43324616">
+				<input type="hidden" data-remote-k="continueurl" name="continueurl" value=""/>
+				<input type="hidden" data-remote-k="cancelurl" name="cancelurl" value=""/>
+				<input type="hidden" data-remote-k="callbackurl" name="callbackurl" value=""/>
+				<input type="hidden" data-remote-k="amount" name="amount" value="0">
+				<input type="hidden" data-remote-k="shop_purchase_id" name="ordernumber" value="0">
+				<input type="hidden" name="currency" value="DKK">
+				<input type="hidden" data-remote-k="cardtypelock" name="cardtypelock" value="creditcard, dankort, edankort, mastercard, mastercard-dk, mastercard-debet-dk">
+				<!-- <input type="hidden" data-remote-k="description" name="description" value=""> -->
+				<input type="hidden" data-remote-k="test" name="testmode" value="">
+				<input type="hidden" data-remote-k="md5" name="md5check" value="">
+			</form>
+			<!-- <iframe name="qk_pay_frame" style="width:100%;height:100%;"></iframe> -->
+		</section>
+	</section>
+</div>

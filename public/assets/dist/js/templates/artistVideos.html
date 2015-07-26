@@ -1,0 +1,71 @@
+<div id="acmenuwrap">
+	<ul id="acmenu">
+		<li>
+			{{#if images.cover}}
+			<img width="60" src="{{images.cover}}" alt="{{name}}" />
+			{{else}}
+			<img src="/demobilleder/hlowq.jpg" />
+			{{/if}}
+		</li>
+		<li>
+			<h1>{{name}}</h1>
+		</li>
+		<li>
+			<a href="../{{slug}}/">
+				<h2>Oversigt</h2>
+			</a>
+		</li>
+		{{#if sections.videos}}		
+		<li>
+			<a href="../{{slug}}/videoer">
+				<h2 class="selected">Videoer</h2>
+			</a>
+		</li>
+		{{/if}}
+		{{#if sections.releases}}		
+		<li>
+			<a href="../{{slug}}/udgivelser">
+				<h2>Udgivelser</h2>
+			</a>
+		</li>
+		{{/if}}
+		<li>
+			<a href="../{{slug}}/koncerter">
+				<h2>Koncerter</h2>
+			</a>
+		</li>
+		{{#if sections.merchandise}}		
+		<li>
+			<a href="../{{slug}}/merchandise">
+				<h2>Merchandise</h2>
+			</a>
+		</li>
+		{{/if}}	
+	</ul>
+</div>
+<div id="accw">
+	<section id="cm">
+		<header class="h roundedlefttop">
+			<span class="fe i-video hicon redtext" aria-hidden="true"></span>
+			<h2>Videoer</h2>
+		</header>	
+		<section class="ip2 c video pc25" id="vidsC">
+			{{#each videos}}
+			<article>
+				<a class="vidPopup" href="https://www.youtube.com/watch?v={{ytid}}" data-ytid="{{ytid}}">
+					<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{ytid}}/hqdefault.jpg" alt="{{../name}} - {{title}} på MusikDK">
+					<div class="vidol">
+						<span>AFSPIL</span>
+					</div>
+					<div class="ellipsis">
+						<h3 class="vn">{{title}}</h3> <br>
+						<h2 class="van">{{../name}}</h2>
+					</div>
+					<span class="fe i-play cicon" aria-hidden="true"></span>
+				</a>
+			</article>
+			{{/each}}	
+		</section>
+	</section>
+</div>
+

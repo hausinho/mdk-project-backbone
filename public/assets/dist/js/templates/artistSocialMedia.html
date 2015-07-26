@@ -1,0 +1,21 @@
+{{#each this}}
+<li class="social">
+	<a href="{{url}}" target="_blank">
+		{{#if image}}
+			 <img src="{{image}}" width="300" />
+		{{/if}}
+		<section class="ip">		
+			<h2></h2>
+			<p>{{{content}}}</p>
+			<h3>
+				<time class="timeago">
+					<span>{{dateFromNow pubDate}}</span>
+				</time> |			
+				{{type}}
+			</h3>
+		</section>
+	</a>
+</li>
+{{/each}}
+
+

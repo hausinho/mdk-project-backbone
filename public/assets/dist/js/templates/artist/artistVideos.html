@@ -1,0 +1,30 @@
+
+<div class="pr">
+	<figure class="ti" id="blurvid">
+		<img data-src="https://i1.ytimg.com/vi/{{videos.[0].ytid}}/hqdefault.jpg" src="https://i1.ytimg.com/vi/{{videos.[0].ytid}}/hqdefault.jpg" alt="ARTISTNAME">
+		<div id="campaignvideo"></div>
+		<iframe id="videocenter" width="550" height="309" src="//www.youtube.com/embed/{{videos.[0].ytid}}?showinfo=0" frameborder="0" allowfullscreen></iframe>		
+	</figure>
+</div>	
+
+<header class="h roundedlefttop">
+	<span class="fe i-video hicon redtext" aria-hidden="true"></span>&nbsp;&nbsp;Musikvideoer
+</header>	
+<section class="ip2 c video pc25" id="vidsC">
+	{{#each videos}}
+	<article>
+		<a class="vidPopup" data-ytid="{{ytid}}">
+			<img class="lazyload" data-src="https://i1.ytimg.com/vi/{{ytid}}/hqdefault.jpg" alt="{{../name}} - {{title}} på MusikDK">
+			<div class="vidol">
+				<span>AFSPIL</span>
+			</div>
+			<div class="ellipsis">
+				<h3 class="vn">{{title}}</h3> <br>
+				<h2 class="van">{{../name}}</h2>
+			</div>
+			<span class="fe i-play cicon" aria-hidden="true"></span>
+		</a>
+	</article>
+	{{/each}}	
+</section>
+

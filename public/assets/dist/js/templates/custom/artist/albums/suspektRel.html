@@ -1,0 +1,155 @@
+
+<div class="tl pure66list fr">
+	<div class="ip9">
+		<h2>V</h2>
+		<h4>
+			<time>(2014)</time>				
+		</h4>
+	</div>
+	<ol>
+		<li>Jazzmælk (til alle mine piger)<span>04:10</span></li>
+		<li>Søn Af En Pistol<span>05:18</span></li>
+		<li>S.U.S.P.E.K.T.<span>02:58</span></li>
+		<li>Hvor F**k Er Mit Jernrør<span>04:19</span></li>
+		<li>Fransk<span>02:31</span></li>
+		<li>Bollede Hende I Går<span>03:48</span></li>
+		<li>Vogn Ninnerfyrre, Pt. 49<span>03:50</span></li>
+		<li>Pacific Palisades<span>05:17</span></li>
+		<li>Svulstig<span>02:26</span></li>
+		<li>Danmark (feat. Jooks)<span>03:58</span></li>
+		<li>Åndsvag (feat. Jooks)<span>04:32</span></li>
+		<li>Hun Er På Mig<span>03:47</span></li>
+		<li>Problemer<span>04:08</span></li>
+		<li>Knepper Dig Til Techno<span>03:25</span></li>
+		<li>Tusindårsfalken<span>02:38</span></li>
+		<li>Sovset Ind I Livet<span>04:18</span></li>	
+	</ol>						
+</div>				
+<div class="c tlalbum pure33">        
+	<article>
+		<img class="lazyload" src="https://static.musik.dk/upload/suspekt/suspekt_v.jpg" alt="Suspekt - V på MusikDK">
+		<div class="albumolfull">
+			<span>AFSPIL</span>
+			<div style="display:none;" class="album-services">
+				<section class="ppw-links ip">
+					<div id="ppwlinkh">
+						<h2>Vælg tjeneste:</h2>
+					</div>
+					<div class="ipof">
+						<ol class="olls">
+							<li class="ls2">
+								<a href="https://open.spotify.com/album/58b8KIxCuq2YIyYRdCHXJe" target="_blank"><button class="btnspotify">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="http://www.wimp.dk/album/33450968" target="_blank"><button class="btnwimp">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="http://play.tdc.dk/#!/play/album/135533937" target="_blank"><button class="btntdcplay">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="http://www.deezer.com/album/8423836?app_id=140685" target="_blank"><button class="btndeezer">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="http://musik.yousee.dk/alb/135533937" target="_blank"><button class="btnyoumusic">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="https://itunes.apple.com/dk/album//id907197653?uo=4" target="_blank"><button class="btnitunes">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="http://musik.telmore.dk/alb/135533937" target="_blank"><button class="btntelmore">&nbsp;</button></a>
+							</li>
+							<li class="ls2">
+								<a href="https://play.google.com/store/music/album/Suspekt_V?id=B6vn2sujmvkispphbzfsyjwhixy" target="_blank"><button class="btngooglemusic">&nbsp;</button></a>
+							</li>								
+						</ol>
+					</div>
+				</section>
+			</div>								
+		</div>
+	</article> 
+</div>
+
+<div class="clear"></div>	
+				
+{{#each releases}}
+<div class="tl pure66list fr">
+	<div class="ip9">
+		<h2>{{title}}</h2>
+		<h4>
+			{{#if releaseDate}}
+			<time>({{trimYear releaseDate}})</time>
+			{{else}}
+			<time>({{trimYear digitalReleaseDate}})</time>
+			{{/if}}					
+		</h4>
+	</div>
+	<ol>
+	{{#each tracks}}
+		<li>{{title}}<span>{{trimTrack lenght}}</span></li>
+	{{/each}}
+	</ol>						
+</div>				
+<div class="c tlalbum pure33">        
+	<article>
+		{{#if cover}}
+		<img class="lazyload" data-src="{{cover}}" alt="{{../name}} - {{title}} på MusikDK">
+		{{else}}
+		<img class="lazyload" data-src="/assets/images/noimage.jpg" />
+		{{/if}}
+		<div class="albumolfull">
+			<span>AFSPIL</span>
+			<div style="display:none;" class="album-services">
+				<section class="ppw-links ip">
+					<div id="ppwlinkh">
+						<h2>Vælg tjeneste:</h2>
+					</div>
+					<div class="ipof">
+						<ol class="olls">
+							{{#each services}}
+							{{#equal name "Spotify" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btnspotify">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Itunes" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btnitunes">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Wimp" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btnwimp">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Tdcplay" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btntdcplay">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Deezer" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btndeezer">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Youmusic" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btnyoumusic">&nbsp;</button></a>
+							</li>
+							{{/equal}}
+							{{#equal name "Rdio" }}
+							<li class="ls2">
+								<a href="{{link}}" target="_blank"><button class="btnrdio w64 iebgfix">&nbsp;</button></a>
+							</li>
+							{{/equal}}														
+							{{/each}}
+						</ol>
+					</div>
+				</section>
+			</div>								
+		</div>
+	</article> 
+</div>
+<div class="clear"></div>
+{{/each}}
+	</section>
+</div>
