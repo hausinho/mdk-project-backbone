@@ -25,57 +25,14 @@ function ($, _, Backbone, pace, layoutmanager, handlebars, magnificPopup, hello,
 		var App = {};
 		
 		if(BASE_HOST === 'localhost'){
-			// DEVELOPMENT SETTINGS
-			// THIS MUST BE REMOVED ONCE DEPLOYED
 			App = {
 				ROOT: '',
 				PORT: ':3000',
 				ENV: 'dev',
-				APIO: 'https://devapi.musik.dk',
-				// APIO_PORT: ':443'
-				HOST: 'http://localhost:3000',
-				// APIO: 'http://localhost:2100',
-				AD_APIO: 'https://adminapi76.musik.dk',
-				clients: {
-					google: '96709818823-qaf82e113og1jqqltlic0pp2dl2u7e82.apps.googleusercontent.com',
-					twitter: 'UnUDsmttnEAWl192DQ8e9xa71',
-					facebook: '271090269744407'
-				}
+				APIO: 'https://api.musik.dk',
+				HOST: 'http://localhost:3000'
 			};
 		} 
-		else if(BASE_HOST === 'stage.musik.dk') {
-			App = {
-				ROOT: '',
-				PORT: '',
-				ENV: 'dev',
-				HOST: 'https://stage.musik.dk',
-				APIO: 'https://devapi.musik.dk',
-				AD_APIO: 'https://adminapi76.musik.dk',
-				clients: {
-					google: '96709818823-kvsmbdld8hah2q9fhda5q93brbdnld8j.apps.googleusercontent.com',
-					twitter: 'UnUDsmttnEAWl192DQ8e9xa71',
-					facebook: '257604381092996'
-				}
-			};
-		}
-		else 
-		{
-			// PRODUCTION SETTINGS
-			// THIS MUST BE REMOVED ONCE DEPLOYED
-			App = {
-				ROOT: '',
-				PORT: '',
-				ENV: 'pro',
-				HOST: 'https://musik.dk',
-				APIO: 'https://api.musik.dk',
-				AD_APIO: 'https://adminapi76.musik.dk',
-				clients: {
-					google: '96709818823-kvsmbdld8hah2q9fhda5q93brbdnld8j.apps.googleusercontent.com',
-					twitter: 'UnUDsmttnEAWl192DQ8e9xa71',
-					facebook: '257604381092996'
-				}
-			};
-		}
 		
 		// Localize or create a new JavaScript Template object.
 		var JST = window.JST = window.JST || {};
