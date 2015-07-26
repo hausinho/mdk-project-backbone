@@ -1,0 +1,43 @@
+{
+  "name": "MusikDK",
+  "version": "1.0.0",
+  "authors": [
+    "Steffan Haunstrup Thomsen <hausinho@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "backbone": "latest",
+    "lodash": "latest",
+    "handlebars": "latest",
+    "jquery-cookie": "latest",
+    "layoutmanager": "latest",
+    "StackBlur": "latest",
+    "pace": "latest",
+    "magnific-popup": "latest",
+    "hello": "latest",
+    "datetimepicker": "https://github.com/xdan/datetimepicker.git#~2.4.3",
+    "jquery-ui": "latest",
+    "moment": "latest",
+	"imagesloaded": "latest",
+    "wookmark-jquery": "1.4.8",
+    "backbone-query-parameters": "https://github.com/jhudson8/backbone-query-parameters.git#~0.4.0",
+    "cropper": "latest",
+    "select2": "latest",
+    "backbone.crossdomain": "latest",
+    "lazysizes": "latest",
+    "trumbowyg": "latest",
+    "jquery.easy-pie-chart": "latest",
+    "countdown": "https://gist.github.com/36dcff89c605f432fff8.git"
+  },
+  "resolutions": {
+    "jquery": "~1.11"
+  }
+}
